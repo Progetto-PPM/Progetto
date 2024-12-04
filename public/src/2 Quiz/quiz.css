@@ -117,7 +117,11 @@ button:hover {
 }
 
 #score-container {
-  display: none;
+  display: none; /* Mantiene lo score nascosto finché non serve */
+  color: rgb(255, 204, 0); /* Cambia il colore del testo dello score */
+  font-size: 24px; /* Cambia la dimensione del testo */
+  font-weight: bold; /* Rende il testo più visibile */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Selezione della risposta */
