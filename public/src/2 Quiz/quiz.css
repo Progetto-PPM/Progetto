@@ -27,11 +27,10 @@
   font-family: garamond;
 }
 
-
 button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: rgb(100, 85, 146);
+  background-color: rgb(114, 59, 233);
   color: white;
   border: none;
   border-radius: 5px;
@@ -119,8 +118,6 @@ button:hover {
 
 #score-container {
   display: none;
-  color: white;
-  font-family: garamond;
 }
 
 /* Selezione della risposta */
@@ -130,6 +127,11 @@ button:hover {
   cursor: not-allowed;
 }
 
+.option.disabled {
+  background-color: #ddd;
+  transform: scale(1.02); /* Aggiunge un leggero effetto al passaggio del mouse */
+  
+}
 /* Risposte corrette o errate */
 .option.correct {
   background-color: #4CAF50;
@@ -143,13 +145,74 @@ button:hover {
 
 /* Posizionamento del pulsante "Avanti" a destra */
 #next-btn {
-  display: flex;  /* Imposta il pulsante come elemento a blocco */
+  margin-top: 20px;
+  display: block;  /* Imposta il pulsante come elemento a blocco */
   margin-left: auto;  /* Allinea il pulsante a destra */
   margin-right: auto;  /* Aggiungi spazio sui lati per centrarlo */
 }
-
 .goBackQuiz {
   position: absolute;
   right: 0px;
+}
+
+/* Contenitore principale per la domanda e il timer */
+.question-timer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 25px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Stile per il contenitore della domanda */
+#question {
+  flex: 1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 20px;
+  font-family: Arial, sans-serif;
+}
+#timer-container {
+  display: none; /* Timer nascosto di default */
+}
+
+/* Stile per il riquadro del timer */
+.timer-container {
+  width: 120px;
+  height: 40px;
+  background: linear-gradient(135deg, #09000e, #0918c0);
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(255, 117, 140, 0.5);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  border: 1px solid rgb(91, 117, 247);
+}
+
+/* Stile del numero del timer */
+.timer-number {
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Animazione "pulse" per il numero */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); color: #ffe4e1; }
+  100% { transform: scale(1); }
+}
+
+/* Classe per l'animazione */
+.pulsing {
+  animation: pulse 1s infinite;
 }
 
