@@ -122,6 +122,8 @@ button:hover {
   font-size: 24px; /* Cambia la dimensione del testo */
   font-weight: bold; /* Rende il testo più visibile */
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 430px;
 }
 
 /* Selezione della risposta */
