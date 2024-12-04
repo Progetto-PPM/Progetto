@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Interattivo</title>
+  <link rel="stylesheet" href="quiz.css">
+  <link rel="stylesheet" href="../home.css">
+    <link rel="stylesheet" href="../../overlay.css">
+    <link rel="stylesheet" href="../Layout/layout.css">
+    <link rel="stylesheet" href="teoria.css">
+    <script src="teoria.js"></script>
+    <script src="../../script.js"></script>
+    <script src="../Layout/layout.js"></script>
+    <script src="quiz.js"></script>
+</head>
+<body>
+  <div class="background-blur-home"></div>
+  <div class="overlay-home"></div>
+  <header>
+      <div class="top-left">
+          <img src="../../Media/Immagini/tasti/tastiHeader/logo.png" class="top-left-sezione1" onclick="onCredits()">
+          <div class="top-left-sezione2">Il Sistema Solare</div>
+      </div>
+      <div class="top-right">
+          <div class="mappa">Dove sono?</div>
+          <div class="help" onclick="onHelp()">?</div>
+          <div class="buttonHome"><img onclick="window.location.href='../home.html';" src="../../Media/Immagini/tasti/tastiHeader/iconaHome.png"></div>
+          <img src="../../Media/Immagini/tasti/tastiHeader/BottoneSinistra.png" class="button" onclick="window.location.href='../home.html';">
+          <img src="../../Media/Immagini/tasti/tastiHeader/BottoneDestra.png" class="button" onclick="goForward()">
+      </div>
+  </header>
+
+
+  <div class="container">
+    <div id="question-container">
+      <h2 id="question">Domanda</h2>
+      <div id="options"></div>
+      <button id="confirm-btn" onclick="confirmAnswer()" style="display:none;">Conferma risposta</button>
+      <button id="next-btn" onclick="nextQuestion()">Avanti</button>
+      <button class="goBackQuiz" onclick="goBackQuiz()">Esci dal quiz</button>
+    </div>
+  
+    <!-- Pulsante "Avanti" spostato fuori dal contenitore delle domande -->
+    
+  
+    <div id="score-container" style="display:none;">
+      <h2>Il tuo punteggio: <span id="score">0</span></h2>
+      <button id="restart-btn" onclick="restartQuiz()">Ricomincia</button>
+      <button id="ahead-btn" onclick="window.location.href='../home.html';">Avanti</button>
+    </div>
+  </div>  
+  
+  <button class="exit" onclick="closePage('../../index.html')">Esci</button>
+
+    <div id="overlayBackground" class="overlay-background"></div>
+        <div id="teamCredits" style="text-align: center; font-family: garamond; display: none;" onclick="offCredits()">
+        
+            <div id="text" class="pannello-descrizione">
+                <div style="text-align: center; color: rgb(144, 118, 202); font-family: garamond; font-size: 120%;">
+                <div class="descrizione-testo">Progettazione e produzione multimediale a cura di:</div>
+              <b>TEAM APOLLO</b></div>
+            </div>
+            
+            <div class="total-descrizioneCrediti" width="100%">
+                <div class="descrizioneCrediti">
+                    <div class="sagomaImg">
+                    </div>
+                    <div class="sagomaDescription">
+                            BICAKU<br> Gabriele
+                    </div>
+                </div>
+                <div class="descrizioneCrediti">
+                    <div class="sagomaImg">
+                    </div>
+                    <div class="sagomaDescription">
+                        RUPPI<br> Matteo
+                    </div>
+                </div>
+                <div class="descrizioneCrediti">
+                    <div class="sagomaImg">
+                    </div>
+                    <div class="sagomaDescription">
+                        TAMBORRINO Giovanni
+                    </div>
+                </div>
+                <div class="descrizioneCrediti">
+                    <div class="sagomaImg">
+                    </div>
+                    <div class="sagomaDescription">
+                        TRANI<br> Francesco
+                    </div>
+                </div>
+                <div class="descrizioneCrediti">
+                    <div class="sagomaImg">
+                    </div>
+                    <div class="sagomaDescription">
+                        ZIZZAMIA<br> Davide Donato
+                    </div>
+                </div>
+            </div>
+            
+            <div class="creditsFooter">
+                <p>Applicazione realizzata a scopo didattico per il corso di Progettazione e Produzione Multimediale tenuto dalla prof.ssa Lanzilotti</p>
+                <p>Università degli Studi di Bari Aldo Moro a.a 2024/2025</p>
+            </div>
+        </div>
+        
+        <div id="infoButtons" style="z-index: 1030; text-align: center; font-family: garamond; display: none" onclick="offHelp()">
+            <div id="sezioneTotaleBottoni">
+                <div class="sezione">
+                    <img src="../../Media/Immagini/tasti/tastiHeader/logo.png">
+                    LOGO<br>Visualizza i crediti e i componenti del nostro Team
+                </div>
+                <div class="sezione">
+                    <div class="buttonHome2">
+                        <img src="../../Media/Immagini/tasti/tastiHeader/iconaHome.png">
+                    </div>
+                    HOME<br>Torna alla home
+                </div>
+                <div class="sezione2">
+                    <img src="../../Media/Immagini/tasti/tastiHeader/BottoneSinistra.png" class="button2">
+                    INDIETRO<br>Torna alla pagina precedente
+                </div>
+                <div class="sezione2">
+                    <img src="../../Media/Immagini/tasti/tastiHeader/BottoneDestra.png" class="button2">
+                    AVANTI<br>Torna alla pagina successiva
+    
+                </div>
+                <div class="sezione">
+                    <div class="help2">?</div>
+                    AIUTO<br>Visualizza aiuto per la navigazione
+                </div>
+                <div class="sezione3">
+                    <div class="mappa2">Dove sono?</div>
+                    MAPPA<br>Visualizza mappa dell'applicazione
+                </div>
+                <div class="sezione">
+                    <div class="sezione4">
+                        <img src="../../Media/Immagini/tasti/tastiInterni/iconaFrecciaSinistra.png" class="imgFrecciaOverlay">
+                    </div>
+                        BACK<br>Visualizza l'elemento precedente
+                </div>
+                <div class="sezione">
+                    <div class="sezione4">
+                        <img src="../../Media/Immagini/tasti/tastiInterni/iconaFrecciaDestra.png" class="imgFrecciaOverlay">
+                    </div>
+                        NEXT<br>Visualizza il prossimo elemento
+                </div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                
+                
+                
+            </div>  
+        </div>
+</body>
+</html>
