@@ -160,7 +160,7 @@ let max = 0;
 
 
 function startTimer() {
-  if (max !== 20) {
+  if (max < 20) {
     // Nascondi il timer se max non è 20
     const timerContainer = document.getElementById('timer-container');
     if (timerContainer) {
