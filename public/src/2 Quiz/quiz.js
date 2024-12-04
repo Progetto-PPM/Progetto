@@ -220,14 +220,14 @@ function disableOptions() {
 
 function passValueAndNavigate(valore) {
   // Modifica l'URL e passa il valore come parametro
-  localStorage.setItem("currentQuestionIndex", valore);
+  localStorage.setItem("max", valore);
   window.location.href= "quiz1.html";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM completamente caricato, avvio il timer...");
-  currentQuestionIndex = parseInt(localStorage.getItem("currentQuestionIndex")) || 0; // Recupera il valore o usa 0
-  max = parseInt(localStorage.getItem("currentQuestionIndex")) || 0;
+  currentQuestionIndex = parseInt(localStorage.getItem("max")) || 0; // Recupera il valore o usa 0
+  max = parseInt(localStorage.getItem("max")) || 0;
   loadQuestion(currentQuestionIndex); // Carica la domanda corrente
   startTimer();
 });
