@@ -92,27 +92,3 @@ function offHelp() {
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 })
-
-function closeServer() {
-
-    if (confirm("Sei sicuro di voler uscire dall'applicazione?")) {
-        // Fai una richiesta POST al server per fermarlo
-        fetch('/shutdown', {
-            method: 'POST',  // Indica che è una richiesta POST
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert("Server fermato con successo!");
-            } else {
-                alert("Errore nel fermare il server.");
-            }
-        })
-        .catch(error => {
-            alert("Errore: " + error.message);
-        });
-    }
-}
