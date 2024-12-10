@@ -43,6 +43,8 @@ header {
     color: white;
     font-family: 'Arial', sans-serif !important;
     z-index: 1000;
+    position: fixed;
+    top: 40px;
 }
 
 
@@ -234,11 +236,12 @@ header {
     text-align: center; /* Centra il testo */
     border: none;
     cursor: pointer;
+    position: fixed;
+    right: 30px;
+    bottom: 10px;
     display: flex; /* Usa flexbox per centrare verticalmente e orizzontalmente */
     justify-content: center; /* Centra il testo orizzontalmente */
     align-self: flex-end; /* Centra il testo verticalmente */
-    margin-right: 65px;
-    margin-bottom: 5px;
     outline: none; /* Rimuove il bordo di focus */
     transition: background-color 0.3s ease, transform 0.5s ease; /* Transizione combinata */
     text-shadow: 
@@ -252,4 +255,5 @@ header {
     transform: scale(1.1);
     filter: brightness(150%);
 }
+
 
