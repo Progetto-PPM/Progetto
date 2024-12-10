@@ -337,18 +337,27 @@ function nextQuestion() {
     document.querySelector('.question-timer-container').style.display = 'none'; // Nascondi anche il timer
     document.getElementById("next-btn").style.display = 'none'; // Nascondi il pulsante "Avanti"
     document.getElementById("score-container").style.display = 'block'; // Mostra il contenitore del punteggio finale
-    document.getElementById("score").textContent = score;
+    console.log("Score at the end of the quiz: ", score);
+  updateScore(score);
   }
 }
 
-function endQuiz() {
-  // Nascondi il contenitore della domanda
-  document.getElementById("question-container").style.display = 'none'; // Nascondi la domanda
-  document.querySelector('.question-timer-container').style.display = 'none'; // Nascondi anche il timer
+function updateScore(score) {
+  const scoreElement = document.getElementById('score');
+  scoreElement.textContent = score; // Mostra il punteggio
+  console.log(score); // Per il debug
 
-  // Mostra il punteggio finale
-  document.getElementById("score-container").style.display = 'block'; // Mostra il contenitore del punteggio finale
-  document.getElementById("score").textContent = score; // Mostra il punteggio
+  // Forza il ricalcolo del layout
+  scoreElement.offsetHeight;
+
+  // Cambia il colore in base al punteggio
+  if (score >= 8) {
+    scoreElement.style.color = 'green';  // Ottimo
+  } else if (score >= 5) {
+    scoreElement.style.color = 'orange'; // Buono
+  } else {
+    scoreElement.style.color = 'red';  // Pessimo
+  }
 }
 
 
