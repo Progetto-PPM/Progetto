@@ -1,0 +1,191 @@
+#navTeoria_2_1 {
+    display: none;
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    grid-template-columns: repeat(9, 11.11%);
+    display: grid; /* La lista è nascosta inizialmente */
+    justify-content: space-between;
+    position: absolute;
+    bottom: 20px; /* Posizionato sopra il bottone, 15px + altezza bottone */  
+    z-index: 10;
+    transform: translateY(-20px); /* La lista inizia sopra il bottone */
+}
+
+#navTeoria_2_1.show {
+    animation: dropUpAnimation 0.8s ease forwards; /* Animazione di ingresso */
+}
+
+/*ANIMAZIONE PER FAR APPARIRE IN ALTO LA BARRA DI NAVIGAZIONE*/
+@keyframes dropUpAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(0px)  scaleY(0) scaleX(0); /* Inizia invisibile e sopra */
+    }
+    100% {
+        opacity: 1; /* Diventa visibile */
+        transform: translateY(-50px)  scaleY(1) scaleX(1); /* Posizione finale centrata sopra il bottone */
+    }
+}
+
+#navTeoria_2_1.hide {
+    animation: dropdownHideAnimation 0.5s ease forwards;
+}
+
+/* ANIMAZIONE PER LA SCOMPARSA DELLA BARRA DI NAVIGAZIONE */
+@keyframes dropdownHideAnimation {
+    0% {
+        opacity: 1;
+        transform: translateY(-50px) scaleY(1) scaleX(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(0px) scaleY(0) scaleX(0);
+    }
+}
+
+#sezioneTeoria_3_1 {
+    position: fixed;
+    bottom: 0px;
+    width: 1000px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.navPianeti_2_1 {
+    width: 100%;
+    height: 90%;
+    border: 1px solid white;
+    background-color: rgb(104, 65, 104);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: garamond;
+    transition: filter 0.5s ease;
+    cursor: pointer;
+}
+
+#sezioneTeoria_3_1 .navPianeti_2_1:hover {
+    filter: brightness(80%);
+}
+
+#auand.move-up {
+    animation: moveUpAnimation 0.5s ease forwards;
+}
+
+/* ANIMAZIONE PER SPOSTARE VERSO L'ALTO E RIMPICCIOLIRE LA SEZIONE CONTENENTE I MODELLI 3D */
+@keyframes moveUpAnimation {
+    0% {
+        transform: translateY(0) scaleX(1) scaleY(1);
+    }
+    100% {
+        transform: translateY(-80px) scaleX(0.7) scaleY(0.7); /* Distanza da regolare in base alla necessità */
+    }
+}
+
+
+#auand.move-down {
+    animation: moveDownAnimation 0.5s ease forwards;
+}
+
+/* ANIMAZIONE PER RIPORTARE VERSO IL BASSO E RINGRANDIRE DI NUOVO LA SEZIONE CONTENENTE I MODELLI 3D */
+@keyframes moveDownAnimation {
+    0% {
+        transform: translateY(-80px) scaleX(0.7) scaleY(0.7);
+    }
+    100% {
+        transform: translateY(0px) scaleX(1) scaleY(1); /* Distanza da regolare in base alla necessità */
+    }
+}
+
+#auand.move-right2 {
+    animation: moveRight2Animation 0.5s ease forwards;
+}
+
+/* ANIMAZIONE PER FAR SPOSTARE VERSO DESTRA LA SEZIONE CONTENENTE 
+IL MODELLO 3D QUANDO SI APRE LA SEZIONE DI TESTO*/
+@keyframes moveRight2Animation {
+    0% {
+        transform: translateX(0px) translateY(0) scale(1);
+    }
+    100% {
+        transform: translateX(400px) translateY(-10px) scale(0.7);
+    }
+}
+
+#auand.move-left2 {
+    animation: moveLeft2Animation 0.5s ease forwards; 
+}
+
+/* ANIMAZIONE PER FAR SPOSTARE VERSO SINISTRA LA SEZIONE CONTENENTE 
+IL MODELLO 3D QUANDO SI CHIUDE LA SEZIONE DI TESTO*/
+@keyframes moveLeft2Animation {
+    0% {
+        transform: translateX(400px) translateY(-10px) scale(0.7);
+    }
+    100% {
+        transform: translateX(0px) translateY(0px) scale(1);
+    }
+}
+
+
+#sezioneTeoria_1_2 {
+    display: flex;
+    width: 700px;
+    height: 500px;
+    gap: 5px;
+    position: absolute;
+    display: none;
+    left: 20px;
+    top: 150px;
+}
+
+.navTeoria_1_2 {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    color: white;
+}
+
+#sezioneTeoria_1_2.move-right {
+    animation: moveRightAnimation 0.5s ease forwards;
+}
+
+/* ANIMAZIONE PER FAR COMPARIRE LA SEZIONE DI TESTO CON LA DESCRIZIONE DEL CORPO CELESTE*/
+@keyframes moveRightAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(0px) scaleX(0) scaleY(0);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateX(80px) scaleX(1) scaleY(1);
+    }
+}
+
+#sezioneTeoria_1_2.move-left {
+    animation: moveLeftAnimation 0.3s ease forwards;
+}
+
+/* ANIMAZIONE PER FAR SCOMPARIRE LA SEZIONE DI TESTO CON LA DESCRIZIONE DEL CORPO CELESTE*/
+@keyframes moveLeftAnimation {
+    0% {
+        opacity: 1;
+        transform: translateX(80px) scaleX(1) scaleY(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(0px) scaleX(0) scaleY(0);
+    }
+}
+
+
+
+
+
