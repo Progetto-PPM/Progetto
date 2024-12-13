@@ -9,6 +9,31 @@ body {
     margin: 0;
 }
 
+.bottone{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 15px 30px;
+    font-size: 16px;
+    background: radial-gradient(circle, rgba(134,124,124,1) 0%, rgba(23,9,54,1) 100%); /* Colore di sfondo */
+    color: white;
+    margin-top: 200px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.5s ease; /* Transizione combinata */
+    margin-bottom: -400px;
+    text-shadow: 
+    0.5px 0.5px 0px white, /* Bordo nero sotto il testo */
+    -0.5px -0.5px 0px white, /* Bordo nero sopra il testo */
+    0.5px -0.5px 0px white, /* Bordo nero a destra e sopra */
+    -0.5px 0.5px 0px white; /* Bordo nero a sinistra e sotto */
+    
+}
+.bottone:hover {
+    transform: scale(1.1);
+    filter: brightness(150%);
+  }
+
 /* Contenitore principale per le sfere grigie */
 #total_sezione_gioco {
     display: grid;
