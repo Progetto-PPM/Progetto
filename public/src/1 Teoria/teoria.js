@@ -1,6 +1,6 @@
  // 9 Array di testi per i 9 corpi celesesti corrispondenti
  const testiSole = [
-    "Testo per le caratteristiche generali del Sole",
+    "Il Sole è la stella al centro del nostro Sistema Solare, è la fonte primaria di energia per tutti i pianeti. \n E' una sfera di plasma, composta principalmente da idrogeno ed elio. \n Il Sole è diviso in vari strati: Nucleo, Zona Radiativa, Zona Convettiva, Fotosfera, Cromosfera, Corona. \n Il Nucleo è la fucina del Sole, l'idrogeno diventa elio e rilascia energia all'esterno.  ",
     "Testo per le specifiche del Sole",
     "Testo per le curiosità del Sole"
 ];
