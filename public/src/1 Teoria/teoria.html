@@ -29,10 +29,14 @@
             <img src="../../Media/Immagini/tasti/tastiHeader/BottoneSinistra.png" class="button" data-toggle="tooltip" data-placement="bottom" title="INDIETRO" onclick="window.location.href='../home.html';">
             <div class="help" data-toggle="tooltip" data-placement="bottom" title="AIUTO" onclick="onHelp()">?</div>
             <div class="buttonHome" data-toggle="tooltip" data-placement="bottom" title="HOME"><img onclick="window.location.href='../home.html';" src="../../Media/Immagini/tasti/tastiHeader/iconaHome.png"></div>
-            <div class="mappa" data-toggle="tooltip" data-placement="bottom" title="MAPPA">Dove sono?</div>
+            <div class="mappa" data-toggle="tooltip" data-placement="bottom" title="MAPPA" onclick="showCurrentPath()">Dove sono?</div>
         </div>
     </header>
 
+    <div id="current-path">
+        <!-- Qui verrà visualizzato il percorso -->
+    </div>
+    
     <div id="total_sezione_teoria">
         <button id="apri_teoria" onclick="window.location.href= '1_1 Corpi Maggiori/sole.html';">
             VAI ALLA TEORIA
