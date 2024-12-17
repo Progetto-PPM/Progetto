@@ -255,4 +255,23 @@ header {
     transform: scale(1.1);
     filter: brightness(150%);
 }
+#shadowed:hover {
+    cursor: not-allowed;
+    filter: brightness(80%);
+}
+
+#current-path {
+    display: none;
+    position: absolute; /* Permette di posizionare l'elemento con precisione */
+    bottom: 35px; /* Adatta questa proprietà per spostarlo sotto `.mappa` */
+    left: 50%; /* Centra orizzontalmente */
+    transform: translateX(-50%); /* Corregge l'allineamento orizzontale */
+    text-align: center;
+    font-size: 18px;
+    color: #444;
+    background-color: rgba(255, 255, 255, 0); /* Trasparente */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: none; /* Rimuove l'ombra */
+}
 
