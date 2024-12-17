@@ -1,6 +1,6 @@
  // 9 Array di testi per i 9 corpi celesesti corrispondenti
  const testiSole = [
-    "Il Sole è la stella al centro del nostro Sistema Solare, è la fonte primaria di energia per tutti i pianeti. \n E' una sfera di plasma, composta principalmente da idrogeno ed elio. \n Il Sole è diviso in vari strati: Nucleo, Zona Radiativa, Zona Convettiva, Fotosfera, Cromosfera, Corona. \n Il Nucleo è la fucina del Sole, l'idrogeno diventa elio e rilascia energia all'esterno.  ",
+    "Il Sole è la stella al centro del nostro Sistema Solare, è la fonte primaria di energia per tutti i pianeti. E' una sfera di plasma, composta principalmente da idrogeno ed elio. \nE' diviso in strati: Nucleo, Zona Radiativa, Zona Convettiva, Fotosfera, Cromosfera, Corona.\n\n Nucleo: La fucina del Sole, l'idrogeno diventa elio e rilascia energia all'esterno.\n Zona Radiativa: L'energia si trasferisce verso l'esterno attraverso radiazioni, è un processo molto lento impiegando fino a milioni di anni per attraversare la zona.\n Zona Convettiva: L'energia si sposta attraverso la convezione: bolle di plasma caldo salgono verso la superficie e, raffreddandosi, ridiscendono.\n Fotosfera: La superficie visibile del Sole, qui si formano le macchie solari, aree più fredde e scure causate dall'attività magnetica.\n\n Cromosfera: è uno strato sottile che emette un debole bagliore rosso durante le eclissi.\n Corona: è lo strato esterno dell'atmosfera, la temperatura è molto alta, non si sa ancora il motivo.",
     "Testo per le specifiche del Sole",
     "Testo per le curiosità del Sole"
 ];
