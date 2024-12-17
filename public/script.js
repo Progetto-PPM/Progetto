@@ -1,3 +1,21 @@
+const pageNames = {
+    "/src/home.html": "Home",
+    "/src/1%20Teoria/teoria.html": "Home/Teoria",
+    "/src/2%20Quiz/QUIZ.html": "Home/Quiz",
+    "/src/2%20Quiz/quiz1.html": "Home/Quiz/Test",
+    "/src/3%20Svago/svago.html": "Home/Svago",
+    "/src/1%20Teoria/1_1%20Corpi%20Maggiori/sole.html": "Home/Teoria/Sole",
+    "/src/1%20Teoria/1_1%20Corpi%20Maggiori/mercurio.html": "Home/Teoria/Mercurio",
+    "/src/1%20Teoria/1_1%20Corpi%20Maggiori/venere.html": "Home/Teoria/Venere",
+    "/src/1%20Teoria/1_1%20Corpi%20Maggiori/terra.html": "Home/Teoria/Terra",
+    "/src/1%20Teoria/1_1%20Corpi%20Maggiori/marte.html": "Home/Teoria/Marte",
+    "/src/1%20Teoria/1_1%20Corpi%20Maggiori/giove.html": "Home/Teoria/Giove",
+    "/src/1%20Teoria/1_1%20Corpi%20Maggiori/saturno.html": "Home/Teoria/Saturno",
+    "/src/1%20Teoria/1_1%20Corpi%20Maggiori/urano.html": "Home/Teoria/Urano",
+    "/src/1%20Teoria/1_1%20Corpi%20Maggiori/nettuno.html": "Home/Teoria/Nettuno",
+
+};
+
 window.onload = function() {
     const audio = document.getElementById('sottofondo');
     const button = document.getElementById('audioButton');
@@ -114,3 +132,18 @@ function closeServer() {
         });
     }
 }
+
+function showCurrentPath() {
+    const currentPath = window.location.pathname; // Ottieni il percorso della pagina
+    console.log(currentPath);
+    const pageName = pageNames[currentPath] || "Pagina Sconosciuta"; // Valore di default se non mappato
+
+    // Seleziona l'elemento in cui mostrare il nome della pagina
+    const pathElement = document.getElementById("current-path");
+    if (pathElement) {
+        pathElement.textContent = pageName; // Aggiorna il contenuto
+        pathElement.style.display = "block"; // Mostra l'elemento
+    }
+}
+
+window.onload = showCurrentPageName;
