@@ -1,0 +1,500 @@
+#total_sezione_teoria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 80%;
+    height: 70%;
+    border: 1px solid white;
+    top: 200px;
+}
+
+#apri_teoria {
+    position: absolute;
+    top: 10px;
+}
+
+#sezioneTotaleIfr {
+    width: 120%;
+    height: 80%;
+    border: 1px solid white;
+    display: grid;
+    place-items: center;
+}
+
+#ifrSistema {
+    width: 100%;
+    height: 100%;
+}
+
+#auand {
+    position: relative;
+    top: 90px;
+    width: 600px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #vaiDietro {
+    position: relative;
+    left: 0px;
+  }
+
+  #vaiAvanti {
+    position: relative;
+    right: 0px;
+  }
+
+
+  /* Classe per l'animazione della ricomparsa delle frecce*/
+  .freccia.mostra2 {
+    animation: mostraFrecce 1s ease;
+    visibility: visible;
+  }
+
+  @keyframes mostraFrecce {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+  }
+  
+
+  /* Classe per l'animazione della scomparsa delle frecce*/
+  .freccia.scompari {
+    animation: scompariFrecce 1s ease;
+    visibility: hidden;
+  }
+
+  @keyframes scompariFrecce {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+        
+    }
+  }
+
+
+  #tendinaPianeti {
+    cursor: pointer;
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-family: garamond;
+    width: 100px;
+    height: 20px;
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    border-top-left-radius: 50% 100%; /* Curva in basso a sinistra */
+    border-top-right-radius: 50% 100%; /* Curva in basso a destra */
+    transition: width 0.3s ease, height 0.3s ease, font-size 0.3s ease;
+  }
+
+  #tendinaPianeti:hover{
+    height: 23px;
+    width: 105px;
+  }
+
+  /* Bottone in stato attivo (quando il menu è aperto) */
+  #tendinaPianeti.active {
+      width: 120px;
+      height: 30px;
+      font-size: 18px;
+  }
+
+  #tendinaInfo {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 20px;
+      height: 100px;
+      position: fixed;
+      left: 0;
+      top: 50%;
+      background-color: rgb(209, 176, 209);
+      color: black;
+      border: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+  }
+
+  #tendinaInfo:hover {
+      width: 25px;
+      transform: scaleY(1.2);
+      border: 1px solid white;
+  }
+
+
+#navTeoria_2_1 {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    grid-template-columns: repeat(9, 11.11%);
+    display: grid; /* La lista è nascosta inizialmente */
+    justify-content: space-between;
+    position: absolute;
+    bottom: 20px; /* Posizionato sopra il bottone, 15px + altezza bottone */  
+    z-index: 10;
+    transform: translateY(-20px); /* La lista inizia sopra il bottone */
+}
+
+
+
+#navTeoria_2_1.show {
+    animation: dropUpAnimation 0.8s ease forwards; /* Animazione di ingresso */
+}
+
+/*ANIMAZIONE PER FAR APPARIRE IN ALTO LA BARRA DI NAVIGAZIONE*/
+@keyframes dropUpAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(0px)  scaleY(0) scaleX(0); /* Inizia invisibile e sopra */
+    }
+    100% {
+        opacity: 1; /* Diventa visibile */
+        transform: translateY(-50px)  scaleY(1) scaleX(1); /* Posizione finale centrata sopra il bottone */
+    }
+}
+
+#navTeoria_2_1.hide {
+    animation: dropdownHideAnimation 0.5s ease forwards;
+}
+
+/* ANIMAZIONE PER LA SCOMPARSA DELLA BARRA DI NAVIGAZIONE */
+@keyframes dropdownHideAnimation {
+    0% {
+        opacity: 1;
+        transform: translateY(-50px) scaleY(1) scaleX(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(0px) scaleY(0) scaleX(0);
+    }
+}
+
+#sezioneTeoria_3_1 {
+    position: fixed;
+    bottom: 0px;
+    width: 1000px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.navPianeti_2_1 {
+    width: 100%;
+    height: 90%;
+    border: 1px solid white;
+    background-color: rgb(104, 65, 104);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: garamond;
+    transition: filter 0.5s ease;
+    cursor: pointer;
+}
+
+#sezioneTeoria_3_1 .navPianeti_2_1:hover {
+    filter: brightness(80%);
+}
+
+#auand.move-up {
+    animation: moveUpAnimation 0.5s ease forwards;
+}
+
+/* ANIMAZIONE PER SPOSTARE VERSO L'ALTO E RIMPICCIOLIRE LA SEZIONE CONTENENTE I MODELLI 3D */
+@keyframes moveUpAnimation {
+    0% {
+        transform: translateY(0) scaleX(1) scaleY(1);
+    }
+    100% {
+        transform: translateY(-80px) scaleX(0.85) scaleY(0.85); /* Distanza da regolare in base alla necessità */
+    }
+}
+
+
+#auand.move-down {
+    animation: moveDownAnimation 0.5s ease forwards;
+}
+
+/* ANIMAZIONE PER RIPORTARE VERSO IL BASSO E RINGRANDIRE DI NUOVO LA SEZIONE CONTENENTE I MODELLI 3D */
+@keyframes moveDownAnimation {
+    0% {
+        transform: translateY(-80px) scaleX(0.85) scaleY(0.85);
+    }
+    100% {
+        transform: translateY(0px) scaleX(1) scaleY(1); /* Distanza da regolare in base alla necessità */
+    }
+}
+
+#auand.move-right-planet {
+    animation: moveRight2Animation 0.5s ease forwards;
+}
+
+/* ANIMAZIONE PER FAR SPOSTARE VERSO DESTRA LA SEZIONE CONTENENTE 
+IL MODELLO 3D QUANDO SI APRE LA SEZIONE DI TESTO*/
+@keyframes moveRight2Animation {
+    0% {
+        transform: translateX(0px) translateY(0) scale(1);
+    }
+    100% {
+        transform: translateX(400px) translateY(-10px) scale(0.85);
+    }
+}
+
+#auand.move-left-planet {
+    animation: moveLeft2Animation 0.5s ease forwards; 
+}
+
+/* ANIMAZIONE PER FAR SPOSTARE VERSO SINISTRA LA SEZIONE CONTENENTE 
+IL MODELLO 3D QUANDO SI CHIUDE LA SEZIONE DI TESTO*/
+@keyframes moveLeft2Animation {
+    0% {
+        transform: translateX(400px) translateY(-10px) scale(0.85);
+    }
+    100% {
+        transform: translateX(0px) translateY(0px) scale(1);
+    }
+}
+
+
+#sezioneTeoria_1_2 {
+    display: flex;
+    width: 700px;
+    height: 500px;
+    gap: 5px;
+    position: absolute;
+    display: none;
+    left: 20px;
+    top: 150px;
+}
+
+.navTeoria_1_2 {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    color: white;
+}
+
+#sezioneTeoria_1_2.move-right-text {
+    animation: moveRightAnimation 0.5s ease forwards;
+    display: flex;
+}
+
+/* ANIMAZIONE PER FAR COMPARIRE LA SEZIONE DI TESTO CON LA DESCRIZIONE DEL CORPO CELESTE*/
+@keyframes moveRightAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(0px) scaleX(0) scaleY(0);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateX(80px) scaleX(1) scaleY(1);
+    }
+}
+
+#sezioneTeoria_1_2.move-left-text {
+    animation: moveLeftAnimation 0.3s ease forwards;
+}
+
+/* ANIMAZIONE PER FAR SCOMPARIRE LA SEZIONE DI TESTO CON LA DESCRIZIONE DEL CORPO CELESTE*/
+@keyframes moveLeftAnimation {
+    0% {
+        opacity: 1;
+        transform: translateX(80px) scaleX(1) scaleY(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(0px) scaleX(0) scaleY(0);
+    }
+}
+
+#sezioneSatelliti {
+    display: grid;
+    grid-template-rows: 50px repeat(4, 1fr);
+    position: absolute;
+    width: 150px;
+    height: 450px;
+    right: 20px;
+    top: 140px;
+    color: white;
+    place-items: center;
+    
+}
+
+#sezioneSatelliti.head {
+    font-size: 50px;
+    font-family: garamond;
+    
+}
+
+.satAbove {
+    width: 80%;
+    height: 80%;
+    display: grid;
+    place-items: center;
+}
+
+.satIfr {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.satIfr:hover {
+    transform: scale(1.2);
+}
+
+
+/* ANIMAZIONE PER FAR SCOMPARIRE LA SEZIONE DEI SATELLITI */
+#sezioneSatelliti.nascondi {
+    animation: nascondiSatelliti 0.5s ease forwards;
+}
+
+@keyframes nascondiSatelliti {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+/* ANIMAZIONE PER FAR RIAPPARIRE LA SEZIONE DEI SATELLITI*/
+#sezioneSatelliti.esciFuori {
+    animation: esciFuoriSatelliti 0.5s ease forwards; 
+}
+
+@keyframes esciFuoriSatelliti {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#sezioneTeoria_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 5px;  
+}
+
+#immagineTeoria {
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-template-rows: 10% 90%;
+    width: 400px;
+    height: 470px;
+}
+
+.nomePianeta {
+    font-family: garamond;
+    font-size: 40px;
+    color: white;
+}
+
+#immagineTeoria img {
+    width: 100%;
+    height: 100%;
+}
+
+#bottoniPianeti {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.planetIfr {
+    width: 400px;
+    height: 400px;
+    position: fixed;
+}
+
+#textTeoria {
+    width: 95%;
+    height: 90%;
+    background-color: rgb(209, 176, 209);
+    opacity: 0.7;
+    clip-path: polygon(5% 0%, 95% 0%, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%, 0% 5%);
+    display: flex;
+    text-align: center;
+}
+
+#sezioneTesto {
+    font-family: garamond;
+    padding: 30px;
+}
+
+.sezioneTeoriaGenerale {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navTeoria_1 {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    color: white;
+}
+
+.navPanel_1 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-self: flex-start;
+    justify-content: center;
+    cursor: pointer;
+    width: 33.3%;
+    border: 1px solid white;
+    height: 100%;
+    background: radial-gradient(circle, rgba(134,124,124,1) 0%, rgb(120, 87, 192) 100%);
+}
+
+.navPanel_1:focus {
+    background: radial-gradient(circle, rgba(134,124,124,1) 0%, rgb(78, 16, 214) 100%);
+    border: 2px solid rgb(223, 195, 223);
+}
+
+.navTeoria_1 .focus {
+    background: radial-gradient(circle, rgba(134,124,124,1) 0%, rgb(78, 16, 214) 100%);
+    border: 2px solid rgb(223, 195, 223);
+}
