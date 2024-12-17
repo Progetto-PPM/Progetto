@@ -319,7 +319,6 @@ function confirmAnswer() {
   document.getElementById("confirm-btn").style.display = 'none';
 }
 
-
 function nextQuestion() {
   // Incrementa l'indice delle domande
   currentQuestionIndex++;
@@ -338,19 +337,28 @@ function nextQuestion() {
     document.getElementById("next-btn").style.display = 'none'; // Nascondi il pulsante "Avanti"
     document.getElementById("score-container").style.display = 'block'; // Mostra il contenitore del punteggio finale
     document.getElementById("score").textContent = score;
+    updateScore(score);
   }
+
 }
 
-function endQuiz() {
-  // Nascondi il contenitore della domanda
-  document.getElementById("question-container").style.display = 'none'; // Nascondi la domanda
-  document.querySelector('.question-timer-container').style.display = 'none'; // Nascondi anche il timer
+function updateScore(score){
+  const scoreElement = document.getElementById('score');
+  scoreElement.textContent = score; //mostra il punteggio
+  console.log(score); //debag
 
-  // Mostra il punteggio finale
-  document.getElementById("score-container").style.display = 'block'; // Mostra il contenitore del punteggio finale
-  document.getElementById("score").textContent = score; // Mostra il punteggio
+  scoreElement.offsetHeight;//forza il leier 
+
+  //cambia il colore del punteggio del punteggio
+  if(score >= 8){
+    scoreElement.style.color = 'green'; // verde
+  }else if(score >= 5){
+    scoreElement.style.color = 'orange'; //arancione
+  }else{
+    scoreElement.style.color = 'red'; //rosso
+  }
+
 }
-
 
 function restartQuiz() {
   currentQuestionIndex = 0;
