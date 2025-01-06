@@ -11,6 +11,20 @@ $('.sezione_gioco_inserisci').droppable({
 let risposteCorrette=0;
 let risposteTotali=$('.sezione_gioco_inserisci').length;
 
+function shufflePlanets() {
+    const container = document.getElementById('celestial_spheres');
+    const planets = Array.from(container.children); // Ottieni tutti i pianeti come array
+
+    // Mescola i pianeti in ordine casuale
+    const shuffledPlanets = planets.sort(() => Math.random() - 0.5);
+
+    // Rimuovi i pianeti dal contenitore e reinseriscili nell'ordine casuale
+    shuffledPlanets.forEach(planet => container.appendChild(planet));
+}
+
+// Esegui la funzione quando la pagina è pronta
+document.addEventListener('DOMContentLoaded', shufflePlanets);
+
 function gestisciDrop(event,ui){
     var box = ui.draggable;
     var boxType=box.attr('data-numtype');
