@@ -176,7 +176,7 @@ function startTimer() {
 
   // Inizializza il timer solo quando il DOM è completamente caricato
   const timerElement = document.getElementById('timer');
-  let countdown = 20; // Durata del timer in secondi
+  let countdown = 30; // Durata del timer in secondi
   if (!timerElement) {
     console.error('Elemento #timer non trovato!');
     return;
