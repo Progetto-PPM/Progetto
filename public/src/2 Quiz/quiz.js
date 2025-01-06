@@ -357,7 +357,15 @@ function updateScore(score){
   }else{
     scoreElement.style.color = 'red'; //rosso
   }
-
+}
+function endQuiz() {
+  // Nascondi il contenitore della domanda e mostra il punteggio finale
+  document.getElementById("question-container").style.display = 'none'; // Nascondi il contenitore delle domande
+  document.querySelector('.question-timer-container').style.display = 'none'; // Nascondi anche il timer
+  document.getElementById("next-btn").style.display = 'none'; // Nascondi il pulsante "Avanti"
+  document.getElementById("score-container").style.display = 'block'; // Mostra il contenitore del punteggio finale
+  document.getElementById("score").textContent = score; // Mostra il punteggio finale
+  updateScore(score); // Funzione per aggiornare il colore del punteggio
 }
 
 function restartQuiz() {
