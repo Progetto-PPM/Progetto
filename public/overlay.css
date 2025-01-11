@@ -1,0 +1,278 @@
+/* L'elemento di oscuramento che copre la pagina sottostante */
+.overlay-background {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.4); /* Oscuramento della pagina sottostante */
+   display: none;  /* Inizialmente nascosto */
+   z-index: 500;     /* L'oscuramento è dietro l'overlay */
+ }
+
+ #croce {
+   width: 50px;
+   height: 50px;
+   border: 5px solid black;
+   background-color: rgb(153, 137, 186);
+   display: grid;
+   place-items: center;
+   border-radius: 50%;
+   border-style: double;
+   font-size: 40px;
+   text-align: center;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   position: fixed;
+   right: 40px;
+   top: 30px;
+   z-index: 2002;
+   cursor: pointer;
+}
+
+#croce2 {
+   width: 50px;
+   height: 50px;
+   border: 5px solid black;
+   background-color: rgb(153, 137, 186);
+   display: grid;
+   place-items: center;
+   border-radius: 50%;
+   border-style: double;
+   font-size: 40px;
+   text-align: center;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   position: fixed;
+   right: 40px;
+   top: 30px;
+   z-index: 2002;
+   cursor: pointer;
+}
+
+#croce:hover {
+   filter: brightness(80%);
+}
+
+#croce:active {
+   filter: brightness(120%);
+}
+
+#croce2:hover {
+   filter: brightness(80%);
+}
+
+#croce2:active {
+   filter: brightness(120%);
+}
+
+#teamCredits {
+   position: fixed;
+   top: 50%;         /* Posiziona al 50% in verticale */
+   left: 50%;        /* Posiziona al 50% in orizzontale */
+   transform: translate(-50%, -50%); /* Centra perfettamente */
+   background-color: rgba(0, 0, 0, 0.8); /* Oscuramento della pagina sottostante */
+   border: 2px solid  rgb(153, 137, 186);;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 90%;
+   height: 90vh;
+   color: white;
+   margin-top: 20px;   
+   row-gap: 5px; 
+   z-index: 2001;  
+}
+
+.pannello-descrizione{
+    display:flex;
+    text-align: center;   
+    justify-content: center;
+    align-items: center;
+    top: 50px;
+    height: 10%;
+    background-color: radial-gradient(circle, rgba(134,124,124,1) 0%, rgba(23,9,54,1) 100%);
+    color: white;
+ }
+
+ .descrizione-testo {
+    margin-left: 20px;
+    margin-right: 20px;
+ }
+
+ .total-descrizioneCrediti {
+    display: grid;
+    margin-top: 20px;
+    width: 100%;
+    height: 60%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+ }
+
+ .descrizioneCrediti {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2px;
+ }
+
+ .sagomaImg {
+    display: block;
+    width: 80%;
+    height: 80%;
+    border: 2px solid black;
+    background: rgb(197, 36, 36);
+ }
+
+ .sagomaDescription {
+    display: flex;
+    font-size: 20px;
+    width: 90%;
+    height: 20%;
+    border: 2px solid black;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(134,124,124,1) 0%, rgba(23,9,54,1) 100%);
+ }
+
+ .creditsFooter {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 20%;
+    font-size: 15px;
+    font-family: garamond;
+ }
+
+
+ #infoButtons {
+   position: fixed;
+   top: 50%;         /* Posiziona al 50% in verticale */
+   left: 50%;        /* Posiziona al 50% in orizzontale */
+   transform: translate(-50%, -50%); /* Centra perfettamente */
+   background-color: rgba(0, 0, 0, 0.9); /* Oscuramento della pagina sottostante */
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   border: 2px solid black;
+   width: 90%;
+   height: 90vh;
+   cursor: pointer;
+   color: white;
+   margin-top: 20px;   
+   row-gap: 5px; 
+   z-index: 2001;  
+}
+
+#sezioneTotaleBottoni {
+   border: 2px solid white;
+   display: grid;
+   width: 100%;
+   height: 100%;
+   grid-template-columns: 20% 20% 20% 20% 20%;
+   grid-template-rows: 33.3% 33.3% 33.3%;
+}
+
+.sezione {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   font-size: 15px;
+   gap: 5px;
+}
+
+
+.sezione img{
+   width: 50%;
+}
+.sezione2 {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   gap: 3px;
+   font-size: 15px;
+}
+
+.sezione3 {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   gap: 15px;
+   font-size: 15px;
+}
+
+.button2 {
+   width: 50%;
+}
+
+.buttonHome2 {
+   display: grid;
+   background: radial-gradient(circle, rgba(162,155,155,1) 0%, rgb(89, 87, 158) 50%);
+   width: 50%;
+   height: 50%;
+   clip-path: polygon(100% 50%, 50% 100%, 0% 50%, 50% 0%);
+   text-align: center;
+   place-items: center;
+}
+
+.buttonHome2 img {
+   width: 60%;
+}
+
+.help2 {
+   display: grid;
+   background: radial-gradient(circle, rgba(162,155,155,1) 0%, rgb(89, 87, 158) 50%);
+   width: 50%;
+   height: 50%;
+   clip-path: polygon(100% 50%, 50% 100%, 0% 50%, 50% 0%);
+   text-align: center;
+   place-items: center;
+   font-size: 60px;
+   color: #45258a;
+   letter-spacing: 2px;
+   text-shadow: 
+   0.5px 0.5px 0px white, /* Bordo nero sotto il testo */
+   -0.5px -0.5px 0px white, /* Bordo nero sopra il testo */
+   0.5px -0.5px 0px white, /* Bordo nero a destra e sopra */
+   -0.5px 0.5px 0px white; /* Bordo nero a sinistra e sotto */
+}
+
+.mappa2 {
+   font-size: 20px;
+   text-shadow: 
+   0 0 5px white,  /* Ombra bianca leggera */
+   0 0 10px white, /* Ombra bianca un po' più intensa */
+   0 0 15px white, /* Ombra ancora più intensa */
+   0 0 20px rgba(255, 255, 255, 0.5), /* Ombra bianca traslucida per effetto più luminoso */
+   0 0 20px rgba(255, 255, 255, 0.5), /* Aggiunge luminosità diffusa */
+   0 0 20px rgba(255, 255, 255, 0.3); /* Effetto di sfumatura più morbido */
+
+   /* Definisci la transizione per il cambiamento di trasformazione e ombra del testo */
+   transition: transform 0.5s ease;
+   margin-top: 25px;
+}
+
+.sezione4 {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: black;
+   border: 10px solid white;
+   border-style: double;
+   width: 80px;
+   height: 60px;
+}
+
+.imgFrecciaOverlay {
+   width: 50%;
+}
+
+
+ 
