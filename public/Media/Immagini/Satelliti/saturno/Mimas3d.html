@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giove 3d</title>
+  <style>
+    body { 
+      margin: 0;
+      overflow: hidden;
+      background-color: transparent; 
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+  // Crea la scena
+  const scene = new THREE.Scene();
+  scene.background = null; // Imposta lo sfondo della scena come trasparente
+
+  // Imposta la telecamera
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  camera.position.z = 1;
+
+  // Imposta il renderer con trasparenza
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
+
+  // Aggiungi luce
+  const ambientLight = new THREE.AmbientLight(0x404040, 2); // Luce soffusa
+  scene.add(ambientLight);
+
+  const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+  directionalLight.position.set(5, 5, 5).normalize();
+  scene.add(directionalLight);
+
+  // Aggiungi controlli (OrbitControls)
+  const controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true; // Effetto smorzamento (opzionale)
+  controls.dampingFactor = 0.05;
+  controls.screenSpacePanning = false; // Impedisce il panning orizzontale
+  controls.minDistance = 0.45; // Zoom minimo
+  controls.maxDistance = 0.45; // Zoom massimo
+
+  // Variabili per animazione
+  let mixer; // Mixer per le animazioni
+
+  // Carica il modello GLB con animazioni
+  const loader = new THREE.GLTFLoader();
+  loader.load(
+    'Mimas.glb', // Sostituisci con il percorso del tuo file GLB
+    function (gltf) {
+      const model = gltf.scene; // Modello 3D
+      scene.add(model);
+
+      // Mixer per animazioni
+      mixer = new THREE.AnimationMixer(model);
+
+      // Riproduci tutte le animazioni disponibili
+      gltf.animations.forEach((clip) => {
+        mixer.clipAction(clip).play();
+      });
+
+      animate(); // Avvia l'animazione dopo il caricamento
+    },
+    undefined, // Funzione di callback per il progresso (opzionale)
+    function (error) {
+      console.error('Errore nel caricamento del modello:', error);
+    }
+  );
+
+  // Funzione di animazione
+  function animate() {
+    requestAnimationFrame(animate);
+
+    const delta = clock.getDelta(); // Delta time per animazioni
+    if (mixer) mixer.update(delta); // Aggiorna le animazioni
+
+    controls.update(); // Aggiorna i controlli
+    renderer.render(scene, camera);
+  }
+
+  // Aggiungi un clock per il mixer
+  const clock = new THREE.Clock();
+
+  // Aggiorna le dimensioni al ridimensionamento della finestra
+  window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+</script>
+
+</body>
+</html>
+
+
