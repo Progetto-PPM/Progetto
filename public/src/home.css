@@ -1,0 +1,310 @@
+body {
+    margin: 0;
+    height: 100vh;      /* Fa sì che l'altezza della pagina copra l'intero schermo */
+    overflow: hidden;        /* Opzionale: evita lo scrolling se lo sfondo è fisso */
+    display: flex; /* Attiva Flexbox */
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Allinea l'header in alto */
+    gap: 10px;
+}
+
+.overlay-home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Colore nero con opacità del 50% */
+    pointer-events: none;  /* Permette di interagire con gli altri contenuti sotto l'overlay */
+ }
+
+ .background-blur-home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Media/Immagini/sfondi/sfondoHome.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px); /* Sfoca l'immagine di sfondo */
+    z-index: -1; /* Mette l'immagine dietro il contenuto */
+}
+
+header {
+    background: radial-gradient(circle, rgba(134,124,124,1) 0%, rgba(23,9,54,1) 100%);
+    width: 90%;
+    height: 100px;
+    background-color: #4CAF50;
+    clip-path: polygon(10% 2%, 90% 2%, 100% 30%, 100% 70%, 90% 100%, 10% 100%, 0% 70%, 0% 30%);
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-family: 'Arial', sans-serif !important;
+    z-index: 1000;
+    position: fixed;
+    top: 40px;
+}
+
+
+.top-left {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    place-items: center;
+    flex: 0 0 40%;
+    text-align: left;
+}
+
+.top-left-sezione1 {
+    cursor: pointer;
+    width: 35%;
+    border-radius: 120px;
+    box-shadow: 
+    0 0 5px white,  /* Ombra bianca leggera */
+    0 0 10px white, /* Ombra bianca più intensa */
+    0 0 15px white, /* Ombra bianca ancora più intensa */
+    0 0 20px rgba(255, 255, 255, 0.7), /* Ombra bianca traslucida per effetto luminoso */
+    0 0 25px rgba(255, 255, 255, 0.5), /* Aggiunge luminosità diffusa */
+    0 0 30px rgba(255, 255, 255, 0.3); /* Ombra morbida che sfuma */
+    filter: brightness(1.2) contrast(1.2); /* Aumenta la luminosità e il contrasto */
+    transition: transform 0.5 ease;
+}
+
+.top-left-sezione1:hover {
+    transform: scale(1.05);
+    box-shadow: 
+    0 0 10px white, 
+    0 0 15px white, 
+    0 0 20px rgba(255, 255, 255, 0.8), 
+    0 0 25px rgba(255, 255, 255, 0.6), 
+    0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+.top-left-sezione2 {
+    color: rgb(69, 37, 138);
+    font-size: 35px;
+    cursor: default;
+    text-shadow: 
+    0 0 5px white,  /* Ombra bianca leggera */
+    0 0 10px white, /* Ombra bianca un po' più intensa */
+    0 0 15px white, /* Ombra ancora più intensa */
+    0 0 20px rgba(255, 255, 255, 0.7), /* Ombra bianca traslucida per effetto più luminoso */
+    0 0 25px rgba(255, 255, 255, 0.5), /* Aggiunge luminosità diffusa */
+    0 0 30px rgba(255, 255, 255, 0.3); /* Effetto di sfumatura più morbido */
+    letter-spacing: 2px; /* Spaziatura tra le lettere */
+}
+
+.top-right {
+    flex: 0 0 40%;
+    display: grid;
+    grid-template-columns: 23.33% 23.33% 23.33% 30%;
+    place-items: center;
+    text-align: center;
+}
+
+.button {
+    width: 80%;
+}
+.button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    filter: brightness(150%);
+}
+
+.help {
+    display: grid;
+    background: radial-gradient(circle, rgba(162,155,155,1) 0%, rgb(89, 87, 158) 50%);
+    width: 80%;
+    height: 80%;
+    clip-path: polygon(100% 50%, 50% 100%, 0% 50%, 50% 0%);
+    text-align: center;
+    place-items: center;
+    font-size: 45px;
+    color: #45258a;
+    letter-spacing: 2px;
+    text-shadow: 
+    0.5px 0.5px 0px white, /* Bordo nero sotto il testo */
+    -0.5px -0.5px 0px white, /* Bordo nero sopra il testo */
+    0.5px -0.5px 0px white, /* Bordo nero a destra e sopra */
+    -0.5px 0.5px 0px white; /* Bordo nero a sinistra e sotto */
+}
+
+.help:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    filter: brightness(150%);
+}
+
+.buttonHome {
+    display: grid;
+    background: radial-gradient(circle, rgba(162,155,155,1) 0%, rgb(89, 87, 158) 50%);
+    width: 70%;
+    height: 70%;
+    clip-path: polygon(100% 50%, 50% 100%, 0% 50%, 50% 0%);
+    text-align: center;
+    place-items: center;
+}
+
+.buttonHome img {
+    width: 60%;
+}
+
+.buttonHome:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    filter: brightness(150%);
+}
+
+.mappa {
+    color: rgb(136, 102, 209);
+    /* Definisci la transizione per il cambiamento di trasformazione e ombra del testo */
+    transition: transform 0.5s ease;
+}
+
+.mappa p {
+    margin-top: 17px;
+    font-size: 20px;
+}
+
+.mappa:hover {
+    cursor: pointer;
+    transform: scale(1.3);
+    filter: brightness(120%);
+    color: white;
+    text-shadow: 
+    0 0 5px white,  /* Ombra bianca leggera */
+    0 0 10px white, /* Ombra bianca un po' più intensa */
+    0 0 15px white, /* Ombra ancora più intensa */
+    0 0 20px rgba(255, 255, 255, 0.5), /* Ombra bianca traslucida per effetto più luminoso */
+    0 0 20px rgba(255, 255, 255, 0.5), /* Aggiunge luminosità diffusa */
+    0 0 20px rgba(255, 255, 255, 0.3); /* Effetto di sfumatura più morbido */
+}
+
+
+#total-sezioneUnità {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 430px;
+    margin-top: 150px;
+}
+
+#sezioneUnità {
+    display: grid;
+    justify-items: center; /* Centra orizzontalmente */
+    align-items: center;   /* Centra verticalmente */
+    width: 80%;
+    height: 70%;
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 33% 33% 33%;
+    color: white;
+}
+
+#colonnaUnità {
+    text-decoration: none;
+    width: 50%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    align-self: flex-start;
+    justify-content: center;
+    z-index: 2;
+}
+
+.titoloUnità {
+    color: rgb(69, 37, 138);
+    font-size: 35px;
+    cursor: default;
+    text-shadow: 
+    0 0 5px white,  /* Ombra bianca leggera */
+    0 0 10px white, /* Ombra bianca un po' più intensa */
+    0 0 15px white, /* Ombra ancora più intensa */
+    0 0 20px rgba(255, 255, 255, 0.7), /* Ombra bianca traslucida per effetto più luminoso */
+    0 0 25px rgba(255, 255, 255, 0.5), /* Aggiunge luminosità diffusa */
+    0 0 30px rgba(255, 255, 255, 0.3); /* Effetto di sfumatura più morbido */
+    letter-spacing: 2px; /* Spaziatura tra le lettere */
+    z-index: 2;
+}
+
+.exit {
+    width: 13%;
+    padding: 5px 5px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Forma esagonale */
+    letter-spacing: 5px; /* Spazio tra le lettere */
+    background: radial-gradient(circle, rgba(134,124,124,1) 0%, rgba(23,9,54,1) 100%); /* Colore di sfondo */
+    color: rgb(69, 37, 138); /* Colore del testo */
+    font-size: 20px; /* Dimensione del testo */
+    font-family: fantasy; /* Grassetto */
+    text-align: center; /* Centra il testo */
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    display: flex; /* Usa flexbox per centrare verticalmente e orizzontalmente */
+    justify-content: center; /* Centra il testo orizzontalmente */
+    align-self: flex-end; /* Centra il testo verticalmente */
+    right: 30px;
+    bottom: 10px;
+    outline: none; /* Rimuove il bordo di focus */
+    transition: background-color 0.3s ease, transform 0.5s ease; /* Transizione combinata */
+    text-shadow: 
+    0.5px 0.5px 0px white, /* Bordo nero sotto il testo */
+    -0.5px -0.5px 0px white, /* Bordo nero sopra il testo */
+    0.5px -0.5px 0px white, /* Bordo nero a destra e sopra */
+    -0.5px 0.5px 0px white; /* Bordo nero a sinistra e sotto */
+}
+
+.exit:hover {
+    transform: scale(1.1);
+    filter: brightness(150%);
+}
+
+#current-path {
+    display: none;
+    position: absolute; /* Permette di posizionare l'elemento con precisione */
+    top: 150px; /* Adatta questa proprietà per spostarlo sotto `.mappa` */
+    left: 80%; /* Centra orizzontalmente */
+    transform: translateX(-50%); /* Corregge l'allineamento orizzontale */
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: rgb(56, 40, 57);
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: none; /* Rimuove l'ombra */
+}
+
+/* ANIMAZIONE PER MOSTRARE IL PERCORSO NELL'APPLICAZIONE */
+#current-path.onAnimation {
+    animation: currentPathAnimationOn 0.2s ease forwards;
+}
+
+@keyframes currentPathAnimationOn{
+    0% {
+        opacity: 0;
+        transform: translateX(-10px) translateY(-30px) scale(0);
+    }
+    100% {
+        transform: translateX(0px) translateY(0px) scale(1);
+        opacity: 1;
+    }
+}
+
+/* ANIMAZIONE PER LA SCOMPARSA DEL PERCORSO DELL'APPLICAZIONE */
+#current-path.offAnimation {
+    animation: currentPathAnimationOff 0.2s ease forwards;
+}
+
+@keyframes currentPathAnimationOff{
+    0% {
+        opacity: 1;
+        transform: translateX(0px) translateY(0px) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-10px) translateY(-30px) scale(0);
+    }
+}
