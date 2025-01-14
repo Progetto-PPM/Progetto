@@ -66,7 +66,7 @@ const questions = [
   },
   {
     question: "Perchè il cielo è blu?",
-    options: ["A causa della diffusione della luce", "A causa del Sole", "Perchè l'acqua degli oceani è blu", "Perchè il cielo p uno specchio"],
+    options: ["A causa della diffusione della luce", "A causa del Sole", "Perchè l'acqua degli oceani è blu", "Perchè il cielo è uno specchio"],
     answer: 1
   },
   {
