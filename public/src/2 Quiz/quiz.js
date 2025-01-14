@@ -56,7 +56,7 @@ const questions = [
   },
   {
     question: "Qual è il pianeta con l'anello di asteroidi più grande del Sistema Solare?",
-    options: ["Urano", "Giiove", "Saturno", "Nettuno"],
+    options: ["Urano", "Giove", "Saturno", "Nettuno"],
     answer: 2
   },
   {
