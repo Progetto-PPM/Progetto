@@ -86,6 +86,18 @@ function offHelp() {
     document.getElementById('croce2').style.display = "none";
 }
 
+function onMap() {
+    document.getElementById('mapOverlay').style.display = "grid";
+    document.getElementById('overlayBackground').style.display = "block";
+    document.getElementById('croce3').style.display = "grid";
+}
+
+function offMap() {
+    document.getElementById('mapOverlay').style.display = "none";
+    document.getElementById('overlayBackground').style.display = "none";
+    document.getElementById('croce3').style.display = "none";
+}
+
 
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
@@ -133,28 +145,17 @@ const pageNames = {
 
 };
 
+
+
 function showCurrentPath() {
     const currentPath = window.location.pathname; // Ottieni il percorso della pagina
-    console.log(currentPath);
     const pageName = pageNames[currentPath] || "Pagina Sconosciuta"; // Valore di default se non mappato
-
     // Seleziona l'elemento in cui mostrare il nome della pagina
     const pathElement = document.getElementById("current-path");
-    if (pathElement.style.display === 'none' || pathElement.style.display === '') {
-        pathElement.textContent = pageName; // Aggiorna il contenuto
-        pathElement.style.display = "block"; // Mostra l'elemento
-        pathElement.classList.remove('offAnimation');
-        pathElement.classList.add('onAnimation');
-    } else if (pathElement.style.display != 'none' || pathElement.style.display === '') {
-        pathElement.textContent = pageName;
-        pathElement.classList.remove('onAnimation');
-        pathElement.classList.add('offAnimation');
-        pathElement.addEventListener('animationend', function() {
-            pathElement.style.display = 'none';
-        }, { once: true });
-    }
+    pathElement.textContent = pageName; // Aggiorna il contenuto
 
     
 }
 
-window.onload = showCurrentPageName;
+window.onload = showCurrentPath;
+
