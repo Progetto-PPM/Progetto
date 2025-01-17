@@ -1,0 +1,233 @@
+.background-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../Media/Immagini/sfondi/sfondo.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px); /* Sfoca l'immagine di sfondo */
+  z-index: -1; /* Mette l'immagine dietro il contenuto */
+}
+
+
+.container {
+  width: 60%;
+  text-align: center;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Posiziona il contenitore come riferimento per gli oggetti assoluti */
+}
+
+#question {
+  color: white;
+  font-family: garamond;
+}
+
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgb(100, 85, 146);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: rgb(69, 37, 138);
+}
+
+#options {
+  margin: 20px 0;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: #f1f1f1;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.option:hover {
+  background-color: #ddd;
+  transform: scale(1.02); /* Aggiunge un leggero effetto al passaggio del mouse */
+}
+
+.option span {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+.option.selected span {
+  background-color: #4CAF50;
+  transform: scale(1.1);
+}
+
+.option.correct span {
+  background-color: #4CAF50;
+  box-shadow: 0 0 8px rgba(0, 255, 0, 0.8);
+}
+
+.option.incorrect span {
+  background-color: #f44336;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
+}
+
+.x-icon {
+  color: #f44336;
+  font-size: 24px;
+  margin-left: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.3s, opacity 0.3s ease;
+}
+
+.option.incorrect .x-icon {
+  visibility: visible;
+  opacity: 1;
+}
+
+.checkmark {
+  color: #4CAF50;
+  font-size: 20px;
+  margin-left: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.3s, opacity 0.3s ease;
+}
+
+.option.correct .checkmark {
+  visibility: visible;
+  opacity: 1;
+}
+
+#score-container {
+    display: none; /* Mantiene lo score nascosto finché non serve */
+    color: rgb(255, 204, 0); /* Cambia il colore del testo dello score */
+    font-size: 24px; /* Cambia la dimensione del testo */
+    font-weight: bold; /* Rende il testo più visibile */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 430px;
+}
+
+
+/* Selezione della risposta */
+.option.selected {
+  background-color: rgb(104, 65, 104);
+  color: white;
+  cursor: not-allowed;
+}
+
+/* Risposte corrette o errate */
+.option.correct {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.option.incorrect {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Posizionamento del pulsante "Avanti" a destra */
+#next-btn {
+  display: flex;  /* Imposta il pulsante come elemento a blocco */
+  margin-left: auto;  /* Allinea il pulsante a destra */
+  margin-right: auto;  /* Aggiungi spazio sui lati per centrarlo */
+}
+
+.goBackQuiz {
+  position: absolute;
+  right: 0px;
+}
+
+/* Contenitore principale per la domanda e il timer */
+.question-timer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Stile per il contenitore della domanda */
+#question {
+  flex: 1;
+  font-size: 1.5rem;
+  margin-right: 20px;
+}
+#timer-container {
+  display: none; /* Timer nascosto di default */
+}
+
+/* Stile per il riquadro del timer */
+.timer-container {
+  width: 120px;
+  height: 40px;
+  background: linear-gradient(135deg, #09000e, #0918c0);
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(255, 117, 140, 0.5);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  border: 1px solid rgb(91, 117, 247);
+}
+
+/* Stile del numero del timer */
+.timer-number {
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Animazione "pulse" per il numero */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); color: #ffe4e1; }
+  100% { transform: scale(1); }
+}
+
+/* Classe per l'animazione */
+.pulsing {
+  animation: pulse 1s infinite;
+}
+
+.options {
+  width: 200px;
+  height: 100px;
+  border: 2px solid white;
+  background: radial-gradient(circle, rgba(162,155,155,1) 0%, rgba(116,115,191,1) 100%);
+  border-radius: 20%;
+}
+
+#question-container2 {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  position: fixed;
+  top: 350px;
+}
+

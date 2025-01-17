@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <title>Teoria</title>
+    <link rel="stylesheet" href="../home.css">
+    <link rel="stylesheet" href="../../overlay.css">
+    <link rel="stylesheet" href="../Layout/layout.css">
+    <link rel="stylesheet" href="teoria.css">
+    <script src="teoria.js"></script>
+    <script src="../../script.js"></script>
+    <script src="../Layout/layout.js"></script>
+    
+</head>
+<body>
+    <div class="background-blur-home"></div>
+    <div class="overlay-home"></div>
+    <header>
+        <div class="top-left">
+            <img src="../../Media/Immagini/tasti/tastiHeader/logo.png" class="top-left-sezione1" data-toggle="tooltip" data-placement="bottom" title="LOGO" onclick="onCredits()">
+            <div class="top-left-sezione2">
+                <div class="top-left-sezione2-sopra">
+                    Il Sistema Solare
+                </div>
+                <div id="current-path">
+                        <!-- Qui verrà visualizzato il percorso -->
+                </div>
+            </div>
+        </div>
+        <div class="top-right">
+            <img src="../../Media/Immagini/tasti/tastiHeader/BottoneSinistra.png" class="button" data-toggle="tooltip" data-placement="bottom" title="INDIETRO" onclick="window.location.href='../home.html';">
+            <div class="help" data-toggle="tooltip" data-placement="bottom" title="AIUTO" onclick="onHelp()">?</div>
+            <div class="buttonHome" data-toggle="tooltip" data-placement="bottom" title="HOME"><img onclick="window.location.href='../home.html';" src="../../Media/Immagini/tasti/tastiHeader/iconaHome.png"></div>
+            <div class="mappa" data-toggle="tooltip" data-placement="bottom" title="MAPPA" onclick="onMap()"><p>Dove sono?</p></div>
+        </div>
+    </header>
+
+    <div id="total_sezione_teoria">
+        <button id="apri_teoria" onclick="window.location.href= '1_1 Corpi Maggiori/sole.html';">
+            VAI ALLA TEORIA
+        </button>
+
+
+        <div id="sezioneTotaleIfr">
+            <iframe src="../../Media/Immagini/Immagini 3D/sistema3D.html" frameborder="0" id="ifrSistema"></iframe>
+        </div>
+    </div>
+
+    
+    
+    
+
+    <button class="exit" onclick="closePage('../../index.html')">Esci</button>
+
+    <div id="overlayBackground" class="overlay-background"></div>
+    <div id="croce" style="display: none;" onclick="offCredits()">X</div>
+        <div id="teamCredits" style="text-align: center; font-family: garamond; display: none;" onclick="offCredits()">
+        
+            <div id="text" class="pannello-descrizione">
+                <div style="text-align: center; color: rgb(144, 118, 202); font-family: garamond; font-size: 120%;">
+                <div class="descrizione-testo">Progettazione e produzione multimediale a cura di:</div>
+              <b>TEAM APOLLO</b></div>
+            </div>
+            
+            <div class="total-descrizioneCrediti" width="100%">
+                <div class="descrizioneCrediti">
+                    <div class="sagomaImg">
+                    </div>
+                    <div class="sagomaDescription">
+                            BICAKU<br> Gabriele
+                    </div>
+                </div>
+                <div class="descrizioneCrediti">
+                    <div class="sagomaImg">
+                    </div>
+                    <div class="sagomaDescription">
+                        RUPPI<br> Matteo
+                    </div>
+                </div>
+                <div class="descrizioneCrediti">
+                    <div class="sagomaImg">
+                    </div>
+                    <div class="sagomaDescription">
+                        TAMBORRINO Giovanni
+                    </div>
+                </div>
+                <div class="descrizioneCrediti">
+                    <div class="sagomaImg">
+                    </div>
+                    <div class="sagomaDescription">
+                        TRANI<br> Francesco
+                    </div>
+                </div>
+                <div class="descrizioneCrediti">
+                    <div class="sagomaImg">
+                    </div>
+                    <div class="sagomaDescription">
+                        ZIZZAMIA<br> Davide Donato
+                    </div>
+                </div>
+            </div>
+            
+            <div class="creditsFooter">
+                <p>Applicazione realizzata a scopo didattico per il corso di Progettazione e Produzione Multimediale tenuto dalla prof.ssa Lanzilotti</p>
+                <p>Università degli Studi di Bari Aldo Moro a.a 2024/2025</p>
+            </div>
+        </div>
+        
+        <div id="croce2" style="display: none;" onclick="offHelp()">X</div>
+        <div id="infoButtons" style="text-align: center; display: none" onclick="offHelp()">
+            <div id="sezioneTotaleBottoni">
+                <div class="sezione">
+                    <img src="../../Media/Immagini/tasti/tastiHeader/logo.png">
+                    LOGO<br>Visualizza i crediti e i componenti del nostro Team
+                </div>
+                <div class="sezione">
+                    <div class="buttonHome2">
+                        <img src="../../Media/Immagini/tasti/tastiHeader/iconaHome.png">
+                    </div>
+                    HOME<br>Torna alla home
+                </div>
+                <div class="sezione2">
+                    <img src="../../Media/Immagini/tasti/tastiHeader/BottoneSinistra.png" class="button2">
+                    INDIETRO<br>Torna alla pagina precedente
+                </div>
+                <div class="sezione">
+                    <div class="help2">?</div>
+                    AIUTO<br>Visualizza aiuto per la navigazione
+                </div>
+                <div class="sezione3">
+                    <div class="mappa2">Dove sono?</div>
+                    MAPPA<br>Visualizza la tua posizione nell'applicazione
+                </div>
+                <div class="sezione">
+                    <div class="sezione4">
+                        <img src="../../Media/Immagini/tasti/tastiInterni/iconaFrecciaSinistra.png" class="imgFrecciaOverlay">
+                    </div>
+                        BACK<br>Visualizza l'elemento precedente
+                </div>
+                <div class="sezione">
+                    <div class="sezione4">
+                        <img src="../../Media/Immagini/tasti/tastiInterni/iconaFrecciaDestra.png" class="imgFrecciaOverlay">
+                    </div>
+                        NEXT<br>Visualizza il prossimo elemento
+                </div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                <div class="sezione"></div>
+                
+                
+                
+            </div>  
+        </div>
+    
+        <div id="croce3" style="display: none;" onclick="offMap()">X</div>
+        <div id="mapOverlay" style="display: none;">
+            <img src="../../Media/Immagini/Mappe/MAPPA_TEORIA.png" alt="mappaHome" width="900px" height="600px">
+            <div id="linkMap-Home" onclick="window.location.href='../home.html';"></div>
+            <div id="linkMap-Teoria" onclick=""></div>
+            <div id="linkMap-Quiz" onclick="window.location.href='../2 Quiz/QUIZ.html';"></div>
+            <div id="linkMap-Quiz-facile" onclick="window.location.href='../2 Quiz/QUIZ.html';"></div>
+            <div id="linkMap-Quiz-medio" onclick="window.location.href='../2 Quiz/QUIZ.html';"></div>
+            <div id="linkMap-Quiz-difficile" onclick="window.location.href='../2 Quiz/QUIZ.html';"></div>
+            <div id="linkMap-Svago" onclick="window.location.href='../3 Svago/svago.html';"></div>
+            <div id="linkMap-planet-sole" class="linkMapOverlay-planet" onclick="window.location.href='1_1 Corpi Maggiori/sole.html';"></div>
+            <div id="linkMap-planet-mercurio" class="linkMapOverlay-planet" onclick="window.location.href='1_1 Corpi Maggiori/mercurio.html';"></div>
+            <div id="linkMap-planet-venere" class="linkMapOverlay-planet" onclick="window.location.href='1_1 Corpi Maggiori/venere.html';"></div>
+            <div id="linkMap-planet-terra" class="linkMapOverlay-planet" onclick="window.location.href='1_1 Corpi Maggiori/terra.html';"></div>
+            <div id="linkMap-planet-marte" class="linkMapOverlay-planet" onclick="window.location.href='1_1 Corpi Maggiori/marte.html';"></div>
+            <div id="linkMap-planet-giove" class="linkMapOverlay-planet" onclick="window.location.href='1_1 Corpi Maggiori/giove.html';"></div>
+            <div id="linkMap-planet-saturno" class="linkMapOverlay-planet" onclick="window.location.href='1_1 Corpi Maggiori/saturno.html';"></div>
+            <div id="linkMap-planet-urano" class="linkMapOverlay-planet" onclick="window.location.href='1_1 Corpi Maggiori/urano.html';"></div>
+            <div id="linkMap-planet-nettuno" class="linkMapOverlay-planet" onclick="window.location.href='1_1 Corpi Maggiori/nettuno.html';"></div>
+        </div>
+</body>
+</html>
