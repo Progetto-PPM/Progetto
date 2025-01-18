@@ -155,52 +155,49 @@ let currentQuestionIndex = 0;
 let score = 0;
 let selectedOption = null; // Variabile per tenere traccia della risposta selezionata
 let max = 0;
+let timerInterval = null; // Memorizza l'istanza di setInterval
+let countdown = 25; // Durata iniziale del timer in secondi
 
+function startTimer(initialTime = 25) {
+  // Ferma eventuali timer attivi
+  if (timerInterval) {
+    clearInterval(timerInterval);
+  }
 
-
-
-function startTimer() {
+  // Verifica se il timer deve essere nascosto
   if (max !== 20) {
-    // Nascondi il timer se max non è 20
     const timerContainer = document.getElementById('timer-container');
     if (timerContainer) {
       timerContainer.style.display = 'none';
     }
-    return;
+    return; // Esci dalla funzione
   }
 
+  // Mostra il timer
   const timerContainer = document.getElementById('timer-container');
-  if (timerContainer) {
-    timerContainer.style.display = 'block'; // Mostra il timer
-  }
-
-  // Inizializza il timer solo quando il DOM è completamente caricato
   const timerElement = document.getElementById('timer');
-  let countdown = 20; // Durata del timer in secondi
-  if (!timerElement) {
-    console.error('Elemento #timer non trovato!');
-    return;
+  if (timerContainer) {
+    timerContainer.style.display = 'block';
   }
 
-  // Aggiunge l'animazione solo quando il timer inizia
-  timerElement.classList.add('pulsing');
+  countdown = initialTime; // Reimposta il countdown
+  if (timerElement) {
+    timerElement.textContent = countdown; // Aggiorna il display iniziale
 
-  const timerInterval = setInterval(() => {
-    countdown--; // Decrementa il timer
-    timerElement.textContent = countdown >= 0 ? countdown : 'Tempo scaduto!'; // Mostra il tempo rimanente
-    
-    // Rimuove l'animazione quando il timer arriva a 0
-    if (countdown === 0) {
-      timerElement.classList.remove('pulsing');
-      // Al termine del timer, disabilita l'interazione
-      disableOptions(); // Disabilita la selezione delle opzioni
+    // Avvia il timer
+    timerInterval = setInterval(() => {
+      countdown--;
+      timerElement.textContent = countdown >= 0 ? countdown : 'Tempo scaduto!';
 
-      // Vai direttamente alla fine del quiz, mostrando il punteggio
-      endQuiz();
-      
-      clearInterval(timerInterval); // Ferma il timer
-    }
-  }, 1000); // Aggiorna ogni secondo
+      // Quando il tempo scade
+      if (countdown <= 0) {
+        clearInterval(timerInterval); // Ferma il timer
+        timerElement.classList.remove('pulsing'); // Rimuove animazione
+        disableOptions(); // Disabilita le opzioni
+        endQuiz(); // Conclude il quiz
+      }
+    }, 1000); // Aggiorna ogni secondo
+  }
 }
 
 
@@ -225,7 +222,6 @@ function passValueAndNavigate(valore) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOM completamente caricato, avvio il timer...");
   currentQuestionIndex = parseInt(localStorage.getItem("currentQuestionIndex")) || 0; // Recupera il valore o usa 0
   max = parseInt(localStorage.getItem("currentQuestionIndex")) || 0;
   loadQuestion(currentQuestionIndex); // Carica la domanda corrente
@@ -234,7 +230,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function loadQuestion(index) {
-  console.log(`Caricamento domanda: ${index}`);
   const questionData = questions[index];
   
   // Mostra la domanda
@@ -327,7 +322,7 @@ function nextQuestion() {
   if (currentQuestionIndex < max + 10 && currentQuestionIndex < questions.length) {
     // Salva l'indice nel localStorage per mantenere lo stato
     localStorage.setItem("currentQuestionIndex", currentQuestionIndex);
-
+    startTimer(25);
     // Carica la prossima domanda
     loadQuestion(currentQuestionIndex);
     document.getElementById("next-btn").disabled = true; // Disabilita il pulsante fino alla selezione
@@ -355,7 +350,6 @@ function endQuiz() {
 function restartQuiz() {
   currentQuestionIndex = 0;
   score = 0;
-
   window.location.href= "QUIZ.html";
 }
 function goBackQuiz(value) {
