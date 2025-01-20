@@ -9,6 +9,10 @@
 
 <!-- CSS jQuery UI -->
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
 <!-- CSS personalizzati -->
 <link rel="stylesheet" href="svago.css">
@@ -17,16 +21,12 @@
 <link rel="stylesheet" href="../Layout/layout.css">
 
 <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <!-- Popper.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 
 <!-- Bootstrap JS -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
 <!-- jQuery UI -->
-<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
 
 <!-- Script personalizzati -->
 <script src="../../script.js"></script>
@@ -43,13 +43,14 @@
     
     <header>
         <div class="top-left">
-            <img src="../../Media/Immagini/tasti/tastiHeader/logo.png" class="top-left-sezione1" data-toggle="tooltip" data-placement="bottom" title="LOGO" onclick="onCredits()">
+            <img src="../../Media/Immagini/tasti/tastiHeader/logo.png" class="top-left-sezione1" data-toggle="tooltip" data-placement="bottom" title="CHI SIAMO" onclick="onCredits()">
             <div class="top-left-sezione2">
                 <div class="top-left-sezione2-sopra">
                     Il Sistema Solare
                 </div>
-                <div id="current-path">
-                        <!-- Qui verrà visualizzato il percorso -->
+                <div id="current-path-total">
+                    <div id="titlePath">Percorso:</div>
+                    <div id="current-path"></div>
                 </div>
             </div>
         </div>
@@ -95,31 +96,39 @@
     </div>
     <div id="celestial_spheres" class="shufflePlanets">
         <!-- Le sfere celesti che l'utente può spostare -->
-        <div class="sphereCelestial"  id="celestial1" data-numtype ="sole" data-toggle="tooltip" data-placement="top" title="SOLE">
+        <div class="sphereCelestial"  id="celestial1" data-numtype ="sole">
+            <div class="planetName">SOLE</div>
             <iframe src="../1 Teoria/1_1 Corpi Maggiori/sole3d.html" frameborder="0" class="ifrPlanetInside"></iframe>
         </div>
-        <div class="sphereCelestial"  id="celestial2" data-numtype ="mercurio" data-toggle="tooltip" data-placement="top" title="MERCURIO">
+        <div class="sphereCelestial"  id="celestial2" data-numtype ="mercurio">
+            <div class="planetName">MERCURIO</div>
             <iframe src="../1 Teoria/1_1 Corpi Maggiori/mercurio3d.html" frameborder="0" class="ifrPlanetInside"></iframe>
         </div>
-        <div class="sphereCelestial"  id="celestial3" data-numtype ="venere" data-toggle="tooltip" data-placement="top" title="VENERE">
-            <iframe src="../1 Teoria/1_1 Corpi Maggiori/venere3d.html" frameborder="0" class="ifrPlanetInside"></iframe>
+        <div class="sphereCelestial"  id="celestial3" data-numtype ="venere">
+            <div class="planetName">VENERE</div><iframe src="../1 Teoria/1_1 Corpi Maggiori/venere3d.html" frameborder="0" class="ifrPlanetInside"></iframe>
         </div>
-        <div class="sphereCelestial"  id="celestial4" data-numtype ="terra" data-toggle="tooltip" data-placement="top" title="TERRA">
+        <div class="sphereCelestial"  id="celestial4" data-numtype ="terra">
+            <div class="planetName">TERRA</div>
             <iframe src="../1 Teoria/1_1 Corpi Maggiori/terra3d.html" frameborder="0" class="ifrPlanetInside"></iframe>
         </div>
-        <div class="sphereCelestial"  id="celestial5" data-numtype ="marte" data-toggle="tooltip" data-placement="top" title="MARTE">
+        <div class="sphereCelestial"  id="celestial5" data-numtype ="marte">
+            <div class="planetName">MARTE</div>
             <iframe src="../1 Teoria/1_1 Corpi Maggiori/marte3d.html" frameborder="0" class="ifrPlanetInside"></iframe>
         </div>
-        <div class="sphereCelestial"  id="celestial6" data-numtype ="giove" data-toggle="tooltip" data-placement="top" title="GIOVE">
+        <div class="sphereCelestial"  id="celestial6" data-numtype ="giove">
+            <div class="planetName">GIOVE</div>
             <iframe src="../1 Teoria/1_1 Corpi Maggiori/giove3d.html" frameborder="0" class="ifrPlanetInside"></iframe>
         </div>
-        <div class="sphereCelestial"  id="celestial7" data-numtype ="saturno" data-toggle="tooltip" data-placement="top" title="SATURNO">
+        <div class="sphereCelestial"  id="celestial7" data-numtype ="saturno">
+            <div class="planetName">SATURNO</div>
             <iframe src="../1 Teoria/1_1 Corpi Maggiori/saturno3d.html" frameborder="0" class="ifrPlanetInside"></iframe>
         </div>
-        <div class="sphereCelestial"  id="celestial8" data-numtype ="urano" data-toggle="tooltip" data-placement="top" title="URANO">
+        <div class="sphereCelestial"  id="celestial8" data-numtype ="urano">
+            <div class="planetName">URANO</div>
             <iframe src="../1 Teoria/1_1 Corpi Maggiori/urano3d.html" frameborder="0" class="ifrPlanetInside"></iframe>
         </div>
-        <div class="sphereCelestial"  id="celestial9" data-numtype ="nettuno" data-toggle="tooltip" data-placement="top" title="NETTUNO">
+        <div class="sphereCelestial"  id="celestial9" data-numtype ="nettuno">
+            <div class="planetName">NETTUNO</div>
             <iframe src="../1 Teoria/1_1 Corpi Maggiori/nettuno3d.html" frameborder="0" class="ifrPlanetInside"></iframe>
         </div>
     </div>
@@ -266,21 +275,21 @@
         <div id="mapOverlay" style="display: none;">
             <img src="../../Media/Immagini/Mappe/MAPPA_SVAGO.png" alt="mappaHome" width="900px" height="600px">
             <div id="linkMap-Home" onclick="goBackMapQuiz(0)"></div>
-            <div id="linkMap-Teoria" onclick="goBackMapQuiz(1)"></div>
+            <div id="linkMap-Teoria" onclick="goBackMapQuiz(11)"></div>
             <div id="linkMap-Quiz" onclick="goBackMapQuiz(22)"></div>
             <div id="linkMap-Quiz-facile" onclick="goBackMapQuiz(22)"></div>
             <div id="linkMap-Quiz-medio" onclick="goBackMapQuiz(22)"></div>
             <div id="linkMap-Quiz-difficile" onclick="goBackMapQuiz(22)"></div>
             <div id="linkMap-Svago"></div>
-            <div id="linkMap-planet-sole" class="linkMapOverlay-planet" onclick="goBackMapQuiz(4)"></div>
-            <div id="linkMap-planet-mercurio" class="linkMapOverlay-planet" onclick="goBackMapQuiz(5)"></div>
-            <div id="linkMap-planet-venere" class="linkMapOverlay-planet" onclick="goBackMapQuiz(6)"></div>
-            <div id="linkMap-planet-terra" class="linkMapOverlay-planet" onclick="goBackMapQuiz(7)"></div>
-            <div id="linkMap-planet-marte" class="linkMapOverlay-planet" onclick="goBackMapQuiz(8)"></div>
-            <div id="linkMap-planet-giove" class="linkMapOverlay-planet" onclick="goBackMapQuiz(9)"></div>
-            <div id="linkMap-planet-saturno" class="linkMapOverlay-planet" onclick="goBackMapQuiz(10)"></div>
-            <div id="linkMap-planet-urano" class="linkMapOverlay-planet" onclick="goBackMapQuiz(11)"></div>
-            <div id="linkMap-planet-nettuno" class="linkMapOverlay-planet" onclick="goBackMapQuiz(12)"></div>
+            <div id="linkMap-planet-sole" class="linkMapOverlay-planet" onclick="goBackMapQuiz(41)"></div>
+            <div id="linkMap-planet-mercurio" class="linkMapOverlay-planet" onclick="goBackMapQuiz(51)"></div>
+            <div id="linkMap-planet-venere" class="linkMapOverlay-planet" onclick="goBackMapQuiz(61)"></div>
+            <div id="linkMap-planet-terra" class="linkMapOverlay-planet" onclick="goBackMapQuiz(71)"></div>
+            <div id="linkMap-planet-marte" class="linkMapOverlay-planet" onclick="goBackMapQuiz(81)"></div>
+            <div id="linkMap-planet-giove" class="linkMapOverlay-planet" onclick="goBackMapQuiz(91)"></div>
+            <div id="linkMap-planet-saturno" class="linkMapOverlay-planet" onclick="goBackMapQuiz(101)"></div>
+            <div id="linkMap-planet-urano" class="linkMapOverlay-planet" onclick="goBackMapQuiz(111)"></div>
+            <div id="linkMap-planet-nettuno" class="linkMapOverlay-planet" onclick="goBackMapQuiz(121)"></div>
     </body>
 </body>
 </html>
