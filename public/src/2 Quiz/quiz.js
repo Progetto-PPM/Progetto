@@ -281,19 +281,16 @@ function confirmAnswer() {
     const selectedIndex = Array.from(selectedOption.parentElement.children).indexOf(selectedOption);
     
     if (selectedIndex === questionData.answer) {
-      if(max == 0){
         selectedOption.classList.add("correct");
-      }
+     
       score++;
     } else {
       
       
       const correctOption = document.getElementById("options").children[questionData.answer];
-      if(max == 0){
+     
         correctOption.classList.add("correct");
         selectedOption.classList.add("incorrect");
-      }
-       
     }
   }
 
