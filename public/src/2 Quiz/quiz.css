@@ -231,3 +231,14 @@ button:hover {
   top: 350px;
 }
 
+#explanation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  background-color: rgb(134, 55, 160);
+  margin-top: 10px;
+  height: 80px;
+}
