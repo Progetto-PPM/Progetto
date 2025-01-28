@@ -224,7 +224,7 @@ function startTimer(initialTime = 25) {
         clearInterval(timerInterval); // Ferma il timer
         timerElement.classList.remove('pulsing'); // Rimuove animazione
         disableOptions(); // Disabilita le opzioni
-        endQuiz(); // Conclude il quiz
+        nextQuestion(); // Conclude il quiz
       }
     }, 1000); // Aggiorna ogni secondo
   }
