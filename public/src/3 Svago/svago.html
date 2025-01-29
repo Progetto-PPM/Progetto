@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVAGO</title>
+  <!-- CSS di Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<!-- CSS jQuery UI -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<!-- CSS personalizzati -->
+<link rel="stylesheet" href="svago.css">
+<link rel="stylesheet" href="../home.css">
+<link rel="stylesheet" href="../../overlay.css">
+<link rel="stylesheet" href="../Layout/layout.css">
+
+<!-- jQuery -->
+
+<!-- Popper.js -->
+
+<!-- Bootstrap JS -->
+
+<!-- jQuery UI -->
+
+<!-- Script personalizzati -->
+<script src="../../script.js"></script>
+<script src="../Layout/layout.js"></script>
+<script src="../2 Quiz/quiz.js"></script>
+
+
+
+    
+    
+</head>
+<body>
+    <div class="background-blur-home"></div>
+    <div class="overlay-home"></div>
+    
+    <header>
+        <div class="top-left">
+            <img src="../../Media/Immagini/tasti/tastiHeader/logo.png" class="top-left-sezione1" data-toggle="tooltip" data-placement="bottom" title="CHI SIAMO" onclick="onCredits()">
+            <div class="top-left-sezione2">
+                <div class="top-left-sezione2-sopra">
+                    Il Sistema Solare
+                </div>
+                <div id="current-path-total">
+                    <div id="titlePath">Percorso:</div>
+                    <div id="current-path"></div>
+                </div>
+            </div>
+        </div>
+        <div class="top-right">
+            <img src="../../Media/Immagini/tasti/tastiHeader/BottoneSinistra.png" class="button" data-toggle="tooltip" data-placement="bottom" title="INDIETRO" onclick="goBackQuiz(2)">
+            <div class="help" data-toggle="tooltip" data-placement="bottom" title="AIUTO" onclick="onHelp()">?</div>
+            <div class="buttonHome" data-toggle="tooltip" data-placement="bottom" title="HOME"><img onclick="goBackQuiz(2)" src="../../Media/Immagini/tasti/tastiHeader/iconaHome.png"></div>
+            <div class="mappa" data-toggle="tooltip" data-placement="bottom" title="MAPPA" onclick="onMap()"><p>Dove sono?</p></div>
+        </div>
+    </header>
+
+ 
+    <div id="total_sezione_gioco">
+        <!-- Le sfere grigie ora sono contenute in una griglia -->
+        <div class="sezione_gioco_vuoti">
+            <div class="sezione_gioco_inserisci" id="gray1" data-area-numtype="sole"></div>
+        </div>
+        <div class="sezione_gioco_vuoti">
+            <div class="sezione_gioco_inserisci" id="gray2" data-area-numtype="mercurio"></div>
+        </div>
+        <div class="sezione_gioco_vuoti">
+            <div class="sezione_gioco_inserisci" id="gray3"data-area-numtype="venere"></div>
+        </div>
+        <div class="sezione_gioco_vuoti">
+            <div class="sezione_gioco_inserisci" id="gray4"data-area-numtype="terra"></div>
+        </div>
+        <div class="sezione_gioco_vuoti">
+            <div class="sezione_gioco_inserisci" id="gray5"data-area-numtype="marte"></div>
+        </div>
+        <div class="sezione_gioco_vuoti">
+            <div class="sezione_gioco_inserisci" id="gray6"data-area-numtype="giove"></div>
+        </div>
+        <div class="sezione_gioco_vuoti">
+            <div class="sezione_gioco_inserisci" id="gray7"data-area-numtype="saturno"></div>
+        </div>
+        <div class="sezione_gioco_vuoti">
+            <div class="sezione_gioco_inserisci" id="gray8"data-area-numtype="urano"></div>
+        </div>
+        <div class="sezione_gioco_vuoti">
+            <div class="sezione_gioco_inserisci" id="gray9"data-area-numtype="nettuno"></div>
+        </div>
+
+    </div>
+    <div id="celestial_spheres" class="shufflePlanets">
+        <!-- Le sfere celesti che l'utente può spostare -->
+        <div class="sphereCelestial"  id="celestial1" data-numtype ="sole">
+            <div class="planetName">SOLE</div>
+            <iframe src="../1 Teoria/1_1 Corpi Maggiori/sole3d.html" frameborder="0" class="ifrPlanetInside"></iframe>
+        </div>
+        <div class="sphereCelestial"  id="celestial2" data-numtype ="mercurio">
+            <div class="planetName">MERCURIO</div>
+            <iframe src="../1 Teoria/1_1 Corpi Maggiori/mercurio3d.html" frameborder="0" class="ifrPlanetInside"></iframe>
+        </div>
+        <div class="sphereCelestial"  id="celestial3" data-numtype ="venere">
+            <div class="planetName">VENERE</div><iframe src="../1 Teoria/1_1 Corpi Maggiori/venere3d.html" frameborder="0" class="ifrPlanetInside"></iframe>
+        </div>
+        <div class="sphereCelestial"  id="celestial4" data-numtype ="terra">
+            <div class="planetName">TERRA</div>
+            <iframe src="../1 Teoria/1_1 Corpi Maggiori/terra3d.html" frameborder="0" class="ifrPlanetInside"></iframe>
+        </div>
+        <div class="sphereCelestial"  id="celestial5" data-numtype ="marte">
+            <div class="planetName">MARTE</div>
+            <iframe src="../1 Teoria/1_1 Corpi Maggiori/marte3d.html" frameborder="0" class="ifrPlanetInside"></iframe>
+        </div>
+        <div class="sphereCelestial"  id="celestial6" data-numtype ="giove">
+            <div class="planetName">GIOVE</div>
+            <iframe src="../1 Teoria/1_1 Corpi Maggiori/giove3d.html" frameborder="0" class="ifrPlanetInside"></iframe>
+        </div>
+        <div class="sphereCelestial"  id="celestial7" data-numtype ="saturno">
+            <div class="planetName">SATURNO</div>
+            <iframe src="../1 Teoria/1_1 Corpi Maggiori/saturno3d.html" frameborder="0" class="ifrPlanetInside"></iframe>
+        </div>
+        <div class="sphereCelestial"  id="celestial8" data-numtype ="urano">
+            <div class="planetName">URANO</div>
+            <iframe src="../1 Teoria/1_1 Corpi Maggiori/urano3d.html" frameborder="0" class="ifrPlanetInside"></iframe>
+        </div>
+        <div class="sphereCelestial"  id="celestial9" data-numtype ="nettuno">
+            <div class="planetName">NETTUNO</div>
+            <iframe src="../1 Teoria/1_1 Corpi Maggiori/nettuno3d.html" frameborder="0" class="ifrPlanetInside"></iframe>
+        </div>
+    </div>
+
+    <script src="svago.js"></script>
+    
+
+    <div id="gameCredits">
+        <div id="gameResults"></div>
+        <div id="gameEnd"></div>
+        <div id="gameEnd-2"></div>
+
+        <div id="bottoniFineGioco">
+            <div id="backHome" onclick="window.location.href='../home.html';">TORNA ALLA HOME</div>
+            <div id="restartGame">RIGIOCA</div>
+        </div>
+    </div>
+
+    <div id="intro-overlay"></div>
+    <div id="gameIntro">
+        <div id="introText">
+            In questo gioco sarai messo alla prova. Avrai di fronte a te i <span class="highlight">9 Corpi più importanti</span> del nostro sistema solare
+            e il tuo compito sarà quello di metterli in ordine di vicinanza alla nostra stella: <span class="highlight">IL SOLE</span>
+            Se ti senti pronto per cominciare puoi pure cliccare sul tasto in basso per iniziare a giocare.
+            Se invece credi di dover rivedere le tue conoscenze sul sistema solare, puoi cliccare direttamente qui sotto
+            e sarai portato direttamente alla sezione della <span class="highlight2" onclick="window.location.href='../1 Teoria/teoria.html';">teoria</span>
+            <br><br><span class="emphasized">Buona Fortuna e Buon divertimento!</span>
+        </div>
+    </div>
+    <div id="gameStartButton">PREMI PER INIZIARE</div>        
+
+<button id="restartGameTotal">RIGIOCA</button>
+  <button class="exit" onclick="closePage('../../index.html')">Esci</button>
+
+  <div id="overlayBackground" class="overlay-background"></div>
+  <div id="croce" style="display: none;" onclick="offCredits()">X</div>
+      <div id="teamCredits" style="text-align: center; display: none;">
+      
+          <div id="text" class="pannello-descrizione">
+              <div style="text-align: center; color: rgb(144, 118, 202); font-family: garamond; font-size: 120%;">
+              <div class="descrizione-testo">Progettazione e produzione multimediale a cura di:</div>
+            <b>TEAM APOLLO</b></div>
+          </div>
+          
+          <div class="total-descrizioneCrediti" width="100%">
+              <div class="descrizioneCrediti">
+                  <div class="sagomaImg">
+                  </div>
+                  <div class="sagomaDescription">
+                          BICAKU<br> Gabriele
+                  </div>
+              </div>
+              <div class="descrizioneCrediti">
+                  <div class="sagomaImg">
+                  </div>
+                  <div class="sagomaDescription">
+                      RUPPI<br> Matteo
+                  </div>
+              </div>
+              <div class="descrizioneCrediti">
+                  <div class="sagomaImg">
+                  </div>
+                  <div class="sagomaDescription">
+                      TAMBORRINO Giovanni
+                  </div>
+              </div>
+              <div class="descrizioneCrediti">
+                  <div class="sagomaImg">
+                  </div>
+                  <div class="sagomaDescription">
+                      TRANI<br> Francesco
+                  </div>
+              </div>
+              <div class="descrizioneCrediti">
+                  <div class="sagomaImg">
+                  </div>
+                  <div class="sagomaDescription">
+                      ZIZZAMIA<br> Davide Donato
+                  </div>
+              </div>
+          </div>
+          
+          <div class="creditsFooter">
+              <p>Applicazione realizzata a scopo didattico per il corso di Progettazione e Produzione Multimediale tenuto dalla prof.ssa Lanzilotti</p>
+              <p>Università degli Studi di Bari Aldo Moro a.a 2024/2025</p>
+          </div>
+      </div>
+      
+      <div id="croce2" style="display: none;" onclick="offHelp()">X</div>
+      <div id="infoButtons" style="z-index: 1030; text-align: center; display: none">
+        <div id="sezioneTotaleBottoni">
+            <div class="sezione">
+                <img src="../../Media/Immagini/tasti/tastiHeader/logo.png">
+                <p class="textInfoIcons">LOGO<br>Visualizza i crediti e i componenti del nostro Team</p>
+            </div>
+            <div class="sezione">
+                <div class="buttonHome2">
+                    <img src="../../Media/Immagini/tasti/tastiHeader/iconaHome.png">
+                </div>
+                <p class="textInfoIcons">HOME<br>Torna alla home</p>
+            </div>
+            <div class="sezione2">
+                <img src="../../Media/Immagini/tasti/tastiHeader/BottoneSinistra.png" class="button2">
+                <p class="textInfoIcons">INDIETRO<br>Torna al precedente elemento del percorso</p>
+            </div>
+            <div class="sezione">
+                <div class="help2">?</div>
+                <p class="textInfoIcons">AIUTO<br>Visualizza aiuto per la navigazione</p>
+            </div>
+            <div class="sezione3">
+                <div class="mappa2">Dove sono?</div>
+                <p class="textInfoIcons">MAPPA<br>Visualizza la tua posizione nell'applicazione</p>
+            </div>
+            <div class="sezione5_1">
+                <div class="sezione4">
+                    <img src="../../Media/Immagini/tasti/tastiInterni/iconaFrecciaSinistra.png" class="imgFrecciaOverlay">
+                </div>
+                    <p class="textNavbar">BACK<br>Visualizza l'elemento precedente</p>
+            </div>
+            <div class="sezione5_1">
+                <div class="sezione4">
+                    <img src="../../Media/Immagini/tasti/tastiInterni/iconaFrecciaDestra.png" class="imgFrecciaOverlay">
+                </div>
+                    <p class="textNavbar">NEXT<br>Visualizza <br> il prossimo elemento</p>
+            </div>
+            <div class="sezione5">
+                <div id="current-path-total">
+                    <div id="titlePath">Percorso:</div>
+                    <div id="current-path"></div>
+                </div> <br>
+                <p class="textNavbar">PERCORSO ATTUALE<br>Contiene il percorso fisico della posizione in cui ti trovi</p>
+            </div>
+            <div class="sezione6">
+                <div id="tendinaPianeti2" class="tendinaPianeti2">
+                    <i class="fas fa-arrow-up"></i> <!-- Freccia su -->
+                </div>
+                <p class="textNavbar">APRI/CHIUDI LA BARRA DI NAVIGAZIONE DEI PIANETI</p>
+            </div>     
+        </div>
+    </div>
+
+    <div id="croce3" style="display: none;" onclick="offMap()">X</div>
+        <div id="mapOverlay" style="display: none;">
+            <img src="../../Media/Immagini/Mappe/MAPPA_SVAGO.png" alt="mappaHome" width="900px" height="600px">
+            <div id="linkMap-Home" onclick="goBackMapQuiz(0)"></div>
+            <div id="linkMap-Teoria" onclick="goBackMapQuiz(11)"></div>
+            <div id="linkMap-Quiz" onclick="goBackMapQuiz(22)"></div>
+            <div id="linkMap-Quiz-facile" onclick="goBackMapQuiz(22)"></div>
+            <div id="linkMap-Quiz-medio" onclick="goBackMapQuiz(22)"></div>
+            <div id="linkMap-Quiz-difficile" onclick="goBackMapQuiz(22)"></div>
+            <div id="linkMap-Svago"></div>
+            <div id="linkMap-planet-sole" class="linkMapOverlay-planet" onclick="goBackMapQuiz(41)"></div>
+            <div id="linkMap-planet-mercurio" class="linkMapOverlay-planet" onclick="goBackMapQuiz(51)"></div>
+            <div id="linkMap-planet-venere" class="linkMapOverlay-planet" onclick="goBackMapQuiz(61)"></div>
+            <div id="linkMap-planet-terra" class="linkMapOverlay-planet" onclick="goBackMapQuiz(71)"></div>
+            <div id="linkMap-planet-marte" class="linkMapOverlay-planet" onclick="goBackMapQuiz(81)"></div>
+            <div id="linkMap-planet-giove" class="linkMapOverlay-planet" onclick="goBackMapQuiz(91)"></div>
+            <div id="linkMap-planet-saturno" class="linkMapOverlay-planet" onclick="goBackMapQuiz(101)"></div>
+            <div id="linkMap-planet-urano" class="linkMapOverlay-planet" onclick="goBackMapQuiz(111)"></div>
+            <div id="linkMap-planet-nettuno" class="linkMapOverlay-planet" onclick="goBackMapQuiz(121)"></div>
+    </body>
+</body>
+</html>
