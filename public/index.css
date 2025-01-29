@@ -1,0 +1,242 @@
+body {
+    display: flex;
+    background-image: url('Media/Immagini/sfondi/sfondo.jpg');
+    background-position: center;  /* Centra l'immagine */
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;               /* Fa sì che l'altezza della pagina copra l'intero schermo */
+    overflow: hidden;            /* Opzionale: evita lo scrolling se lo sfondo è fisso */
+}
+
+.top-left {
+    cursor: default;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 50% 50%;
+    width: 400px;
+    font-family: 'Arial', sans-serif; /* Puoi cambiare il font */
+    font-size: 20px; /* Imposta la dimensione del testo */
+    font-weight: bold; /* Imposta il peso del carattere */
+    text-transform: uppercase; /* Opzionale: trasforma il testo in maiuscolo */
+    text-shadow: 
+    0 0 5px white,  /* Ombra bianca leggera */
+    0 0 10px white, /* Ombra bianca un po' più intensa */
+    0 0 15px white, /* Ombra ancora più intensa */
+    0 0 20px rgba(255, 255, 255, 0.7), /* Ombra bianca traslucida per effetto più luminoso */
+    0 0 25px rgba(255, 255, 255, 0.5), /* Aggiunge luminosità diffusa */
+    0 0 30px rgba(255, 255, 255, 0.3); /* Effetto di sfumatura più morbido */
+    letter-spacing: 2px; /* Spaziatura tra le lettere */
+    position:absolute;
+    top: 5px;
+    left: 10px;
+    color: rgb(69, 37, 138);
+}
+
+.top-left-text {
+    width: 400px;
+    text-align: center;
+}
+
+.top-left-img {
+    display: grid;
+    place-items: center;
+}
+
+.logo {
+    cursor: pointer;
+    width: 100px;
+    opacity: 0.9;
+    border-radius: 120px;
+    box-shadow: 
+    0 0 5px white,  /* Ombra bianca leggera */
+    0 0 10px white, /* Ombra bianca più intensa */
+    0 0 15px white, /* Ombra bianca ancora più intensa */
+    0 0 20px rgba(255, 255, 255, 0.7), /* Ombra bianca traslucida per effetto luminoso */
+    0 0 25px rgba(255, 255, 255, 0.5), /* Aggiunge luminosità diffusa */
+    0 0 30px rgba(255, 255, 255, 0.3); /* Ombra morbida che sfuma */
+    filter: brightness(1.2) contrast(1.2); /* Aumenta la luminosità e il contrasto */
+    transition: transform 0.5 ease, box-shadow 0.3 ease;
+}
+
+.logo:hover {
+    transform: scale(1.3);
+    box-shadow: 
+    0 0 5px white,  /* Ombra bianca leggera */
+    0 0 10px white, /* Ombra bianca più intensa */
+    0 0 15px white, /* Ombra bianca ancora più intensa */
+    0 0 20px rgba(255, 255, 255, 0.7), /* Ombra bianca traslucida per effetto luminoso */
+    0 0 25px rgba(255, 255, 255, 0.5), /* Aggiunge luminosità diffusa */
+    0 0 30px rgba(255, 255, 255, 0.3); /* Ombra morbida che sfuma */
+    filter: brightness(1.2) contrast(1.2); /* Aumenta la luminosità e il contrasto */
+}
+
+.top-right-buttons {
+    width: 13%;
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    display: flex; /* Usa flexbox per centrare verticalmente e orizzontalmente */
+    justify-content: center; /* Centra il testo orizzontalmente */
+    align-items: center; /* Centra il testo verticalmente */
+    outline: none; /* Rimuove il bordo di focus */
+}
+
+#audioButton {
+    cursor: pointer;
+    text-shadow: 
+    0.5px 0.5px 0px white, /* Bordo nero sotto il testo */
+    -0.5px -0.5px 0px white, /* Bordo nero sopra il testo */
+    0.5px -0.5px 0px white, /* Bordo nero a destra e sopra */
+    -0.5px 0.5px 0px white; /* Bordo nero a sinistra e sotto */
+    position: absolute;
+    width: 100%;
+    color: rgb(69, 37, 138); /* Colore del testo */
+    padding: 5px 5px;
+    font-family: fantasy; /* Grassetto */
+    background: radial-gradient(circle, rgba(134,124,124,1) 0%, rgba(23,9,54,1) 100%); /* Colore di sfondo */
+    border: none;
+    outline: none; /* Rimuove il bordo di focus */
+    transition: background-color 0.3s ease, transform 0.5s ease; /* Transizione combinata */
+}
+
+#audioButton:hover {
+    transform: scale(1.1);
+    filter: brightness(150%);
+    border-color: #FF6347;
+    color: #ec4d31;
+    font-weight: bold;
+    -webkit-text-stroke: 0.3px black;
+}
+
+
+
+
+.centerBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Colore nero con opacità del 50% */
+    pointer-events: none;  /* Permette di interagire con gli altri contenuti sotto l'overlay */
+ }
+.background-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Media/Immagini/sfondi/sfondo.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px); /* Sfoca l'immagine di sfondo */
+    z-index: -1; /* Mette l'immagine dietro il contenuto */
+}
+
+
+
+.start {
+    width: 80%;
+    position: fixed;
+    letter-spacing: 20px; /* Spazio tra le lettere */
+    background: radial-gradient(circle, rgba(134,124,124,1) 0%, rgba(23,9,54,1) 100%); /* Colore di sfondo */
+    color: rgb(69, 37, 138); /* Colore del testo */
+    font-size: 50px; /* Dimensione del testo */
+    font-family: fantasy; /* Grassetto */
+    text-align: center; /* Centra il testo */
+    cursor: pointer;
+    border: none;
+    display: flex; /* Usa flexbox per centrare verticalmente e orizzontalmente */
+    justify-content: center; /* Centra il testo orizzontalmente */
+    align-items: center; /* Centra il testo verticalmente */
+    outline: none; /* Rimuove il bordo di focus */
+    transition: background-color 0.3s ease, transform 0.5s ease; /* Transizione combinata */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Forma esagonale */
+    text-shadow: 
+        0.5px 0.5px 0px white, /* Bordo nero sotto il testo */
+        -0.5px -0.5px 0px white, /* Bordo nero sopra il testo */
+        0.5px -0.5px 0px white, /* Bordo nero a destra e sopra */
+        -0.5px 0.5px 0px white; /* Bordo nero a sinistra e sotto */
+}
+
+.start:hover {
+    transform: scale(1.1);
+    filter: brightness(150%);
+    border-color: #FF6347;
+    color: #ec4d31;
+    font-weight: bold;
+    -webkit-text-stroke: 0.3px black;
+}
+
+.exit {
+    width: 13%;
+    padding: 5px 5px;
+    position: fixed; /* Posiziona il bottone in modo fisso rispetto alla finestra */
+    bottom: 20px;    /* Distanza dal fondo della pagina */
+    right: 20px;     /* Distanza dal lato destro della pagina */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Forma esagonale */
+    letter-spacing: 5px; /* Spazio tra le lettere */
+    background: radial-gradient(circle, rgba(134,124,124,1) 0%, rgba(23,9,54,1) 100%); /* Colore di sfondo */
+    color: rgb(69, 37, 138); /* Colore del testo */
+    font-size: 20px; /* Dimensione del testo */
+    font-family: fantasy; /* Grassetto */
+    text-align: center; /* Centra il testo */
+    border: none;
+    cursor: pointer;
+    display: flex; /* Usa flexbox per centrare verticalmente e orizzontalmente */
+    justify-content: center; /* Centra il testo orizzontalmente */
+    align-items: center; /* Centra il testo verticalmente */
+    outline: none; /* Rimuove il bordo di focus */
+    transition: background-color 0.3s ease, transform 0.5s ease; /* Transizione combinata */
+    text-shadow: 
+    0.5px 0.5px 0px white, /* Bordo nero sotto il testo */
+    -0.5px -0.5px 0px white, /* Bordo nero sopra il testo */
+    0.5px -0.5px 0px white, /* Bordo nero a destra e sopra */
+    -0.5px 0.5px 0px white; /* Bordo nero a sinistra e sotto */
+}
+
+.exit:hover {
+    transform: scale(1.1);
+    filter: brightness(150%);
+    border-color: #FF6347;
+    color: #ec4d31;
+    font-weight: bold;
+    -webkit-text-stroke: 0.3px black;
+}
+
+
+/* Contenitore della barra di caricamento */
+.loading-bar-container {
+    position: fixed;
+    left: 10%;
+    width: 80%;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Barra di caricamento */
+.loading-bar {
+    height: 100%;
+    width: 0;
+    background-color: rgb(78, 8, 242);
+    border-radius: 10px;
+    transition: width 0.1s;
+}
+
+.progress-icon {
+    position: absolute;
+    top: -25px; /* Posiziona l'immagine sopra la barra */
+    height: 80px;
+    width: 80px;
+    transition: left 0.1s ease;
+}
