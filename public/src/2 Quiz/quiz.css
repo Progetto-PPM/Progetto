@@ -251,3 +251,11 @@ button:hover {
   width: 800px;
 }
 
+#question-number {
+  position: absolute;
+}
+
+#questionFranco {
+  color: red;
+}
+
