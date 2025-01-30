@@ -260,6 +260,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function loadQuestion(index) {
+
+  let franco = 0;
+  
+  // Aggiorna il numero della domanda
+  document.getElementById("question-number").textContent = franco + 1;
+  
   const questionData = questions[index];
   
   // Mostra la domanda
