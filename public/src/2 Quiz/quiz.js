@@ -301,6 +301,8 @@ function selectOption(optionElement, index) {
 }
 
 function confirmAnswer() {
+
+  clearInterval(timerInterval);
   const questionData = questions[currentQuestionIndex];
 
   // Disabilita il pulsante di conferma per evitare modifiche
