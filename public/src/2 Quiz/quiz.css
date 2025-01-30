@@ -164,8 +164,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
   border-radius: 5px;
 }
 
@@ -253,9 +252,15 @@ button:hover {
 
 #question-number {
   position: absolute;
+  left: -50px;
+  color: #4CAF50;
 }
 
 #questionFranco {
   color: red;
+}
+
+#barraFranco {
+  color: white;
 }
 
