@@ -1,9 +1,11 @@
-const questions = [
+const questions = 
+[
+
   {
     question: "Qual è la principale fonte di energia per tutti i pianeti del nostro sistema solare?",
     options: ["Nettuno", "Sole", "Fusione Nucleare", "Fotosintesi Clorofilliana"],
     answer: 1,
-    explanation: "Il Sole è la fonte principale di energia per il sistema solare grazie alla fusione nucleare che avviene nel suo nucleo."
+    explanation: "Il Sole, con il calore che emette, è la fonte principale d'energia per i pianeti del Sistema Solare, garantendo anche la vita sulla Terra."
   },
   {
     question: "Qual è il pianeta più vicino al sole?",
@@ -15,169 +17,169 @@ const questions = [
     question: "Qual è il pianeta più grande del nostro sistema solare?",
     options: ["Sole", "Terra", "Marte", "Giove"],
     answer: 3,
-    explanation: "Il pianeta più grande del nostro sistema solare è Giove."
+    explanation: "Il pianeta più grande del nostro sistema solare è Giove, con un diametro di ben 139mila km!."
   },
   {
-    question: "Qual è il nome del processo attraverso cui il Sole produce energia?",
-    options: ["Radioattività", "Combustione", "Fusione Nucleare", "Fissione Nucleare"],
+    question: "Qual è lo strato più interno del Sole?",
+    options: ["Zona Radiativa", "Zona Convettiva", "Nucleo", "Fotosfera"],
     answer: 2,
-    explanation: "Il nome del processo attraverso cui il Sole produce energia è Fusione Nucleare."
+    explanation: "Lo strato più interno del Sole è il Nucleo, dove avvengono molte reazioni di fusione di idrogeno che, trasformandosi in eio viene liberata l'energia che viaggerà negli strati superiori."
   },
   {
     question: "Quale pianeta è famoso per la sua Grande Macchia Rossa?",
     options: ["Giove", "Saturno", "Mercurio", "Sole"],
     answer: 0,
-    explanation: "Il pianeta è famoso per la sua Grande Macchia Rossa è Giove."
+    explanation: "La Grande Macchia Rossa di Giove è una gigantesca tempesta anticiclonica, larga più di una volta e mezza il diametro della Terra, attiva da almeno 350 anni."
   },
   {
     question: "Qual è il pianeta più caldo del nostro sistema solare?",
     options: ["Terra", "Mercurio", "Venere", "Sole"],
     answer: 2,
-    explanation: "Il pianeta più caldo del nostro sistema solare è Venere."
+    explanation: "La sua atmosfera, composta principalmente da anidride carbonica con tracce di azoto e acido solforico, genera una pressione 92 volte superiore a quella terrestre e intrappola il calore, rendendo Venere il pianeta più caldo del Sistema Solare."
   },
   {
     question: "Quale pianeta ha il maggior numero di lune?",
     options: ["Giove", "Saturno", "Nettuno", "Urano"],
     answer: 0,
-    explanation: "Il pianeta ha il maggior Giove."
+    explanation: "Giove ha 67 satelliti in tutto."
   },
   {
     question: "Qual è l'unico pianeta conosciuto per ospitare la vita?",
     options: ["Terra", "Marte", "Giove", "Saturno"],
     answer: 0,
-    explanation: "L'unico pianeta conosciuto per ospitare la vita è la Terra."
+    explanation: "La Terra è il solo pianeta noto ad avere acqua in tutti e tre gli stati (solido, liquido e gassoso) e la temperatura ottimale data dall'atmosfera, rendono la Terra un pianeta ottimale per la vita."
   },
   {
-    question: "Qual è il nome del processo che genera il campo magnetico terrestre?",
-    options: ["Influenza del Sole", "Dinamo Terrestre", "Attrazione Gravitazionale", "Magnetizzazione delle rocce"],
+    question: "Come viene generato il campo magnetico terrestre?",
+    options: ["Dal movimento delle placche", "Dal movimento del nucleo esterno", "Dalle eruzioni vulcaniche", "Da quanto ferro viene scavato"],
     answer: 1,
-    explanation: "Il nome del processo che genera il campo magnetico terrestre è Dinamo Terrestre."
+    explanation: "Il moveimento del nucleo esterno genera un circuito elettrico profondo che crea un campo magnetico allineato con l'asse di rotazione."
   },
   {
     question: "Quale pianeta ospita il vulcano più grande del sistema solare?",
     options: ["Giove", "Sole", "Terra", "Marte"],
     answer: 3,
-    explanation: "Il vulcano più grande del sistema solare si trova su Marte."
+    explanation: "Una caratteristica notevole di Marte è il vulcano chiamato Monte Olympus, con 22km d'altezza."
   },
   {
     question: "Quale pianeta è conosciuto come la ''Stella del mattino''",
     options: ["Venere", "Saturno", "Sole", "Luna"],
     answer: 0,
-    explanation: "Il pianeta è conosciuto come la Stella del mattino è Venere."
+    explanation: "La luminosità di Venere lo rende uno dei corpi celesti più visibili dal pianeta Terra, dandogli il nome 'Stella del Mattino'."
   },
   {
     question: "Qual è il pianeta con l'anello di asteroidi più grande del Sistema Solare?",
     options: ["Urano", "Giove", "Saturno", "Nettuno"],
     answer: 2,
-    explanation: "Il pianeta con l'anello di asteroidi più grande del Sistema Solare è Saturno."
+    explanation: "Saturno e Urano sono gli unici pianeti che hanno un anello di asteroidi intorno a loro, ma Saturno è l'unico pianeta con l'anello ben visibile."
   },
   {
-    question: "Cosa sono le Comete?",
-    options: ["Pallette di ghiaccio e roccia", "Asteroidi incandescenti", "Stelle luminose", "Pianeti fuori dal Sistema Solare"],
-    answer: 0,
-    explanation: "le Comete sono pallette di ghiaccio e roccia."
-  },
-  {
-    question: "Perchè il cielo è blu?",
-    options: ["A causa della diffusione della luce", "A causa del Sole", "Perchè l'acqua degli oceani è blu", "Perchè il cielo è uno specchio"],
-    answer: 1,
-    explanation: "Il cielo è blu perché a causa del Sole."
-  },
-  {
-    question: "Cos'è un anno luce?",
-    options: ["Distanza percorsa dalla luce in un anno", "L'anno luce è il tempo che la luce impiega per raggiungere un oggetto celeste", "L'anno luce è la distanza tra la Terra e il Sole", "L'anno luce è una misura di luminosità"],
-    answer: 0,
-    explanation: "Un anno luce è distanza percorsa dalla luce in un anno."
-  },
-  {
-    question: "Come si è formato il Sistema Solare? ",
-    options: ["I pianeti sono stati creati da Dio", "Da una nebulosa.", "Il Sistema Solare si è formato da un'esplosione stellare", "Il Sistema Solare è sempre esistito così come lo conosciamo"],
-    answer: 1,
-    explanation: "Il Sistema Solare si è formato da una nebulosa."
-  },
-  {
-    question: "Cosa sono le fasi lunari?",
-    options: ["Le fasi lunari sono causate dall'ombra della Terra", "Le fasi lunari sono dovute a un cambiamento nella distanza tra la Terra e la Luna", "Diversi aspetti della Luna visti dalla Terra", "Le fasi lunari sono causate da nuvole che coprono la Luna"],
+    question: "Quale pianeta oltre la Terra presenta segni di acqua liquida??",
+    options: ["Mercurio", "Nettuno", "Marte", "Saturno"],
     answer: 2,
-    explanation: "Le fasi lunari sono diversi aspetti della Luna visti dalla Terra."
+    explanation: "Marte ha calotte polari costituie da ghiaccio d'acqua e ghiaccio secco. Sono stati scoperti inoltre segni di antichi letti di fiumi e possibili oceani, suggerendo che Marte potrebbe aver ospitato acqua liquida e un clima più caldo miliardi di anni fa."
   },
   {
-    question: "Dove si trova la fascia degli asteroidi?",
-    options: ["Tra Urano e Nettuno", "Tra Saturno e Urano", "Tra Mercurio e Venere", "Tra Marte e Giove"],
+    question: "Da cosa viene influenzata l'atmosfera terrestre?",
+    options: ["Dall'umidità", "Da Sole", "Dalle correnti oceaniche", "Tutte le precedenti"],
     answer: 3,
-    explanation: "La fascia degli asteroidi si trova Tra Marte e Giove."
+    explanation: "L'atmosfera varia continuamente, influenzata da vari fattori tra cui correnti oceaniche, riscaldamento solare e umidità.."
+  },
+  {
+    question: "Perché è importante l'atmosfera?",
+    options: ["Protegge la Terra dai raggi ultra-violetti", "Genera il vento per rinfrescare le giornate in estate", "Protegge la Terra dai meteoriti", "Perchè ci permette di respirare"],
+    answer: 0,
+    explanation: "L'atmosfera, ricca di azoto e ossigeno, protegge la vita dai raggi ultravioletti."
+  },
+  {
+    question: "Perchè Marte non riesce a trattenere il calore?",
+    options: ["E' troppo lontano dal Sole", La pressione atmosferica è troppo poco densa", "La pressione atmosferica è troppo densa", "Il pianeta è troppo piccolo"],
+    answer: 1,
+    explanation: " La pressione atmosferica è solo l'1% di quella terrestre, impedendo a Marte di trattenere calore, il che causa grandi escursioni termiche."
+  },
+  {
+    question: "Qual è lo strato più esterno della Terra?",
+    options: ["Il mantello", "L'oceano", "La crosta", "Le Nuvole"],
+    answer: 2,
+    explanation: "La crosta terrestre è la parte più esterna del pianeta Terra, del cui intero volume essa costituisce soltanto l'1%, una sorta di involucro di piccolissimo spessore, qualche decina di chilometri appena."
+  },
+  {
+    question: "Come ci proteggono Giove e Saturno?",
+    options: ["Spaventa chi è fuori dal Sistema Solare", "Assorbendo gli asteroidi", "Fornisce energia agli altri pianeti", "Deviando gli asteroidi con la sua forza di gravità"],
+    answer: 3,
+    explanation: " grazie alla gravità combinata di Giove e Saturno, buona parte degli asteroidi viene espulso dal Sistema Solare, dando tranquillità al nostro Sistema Solare."
   },
   {
     question: "Quanto dura il Periodo di Rivoluzione di Mercurio?",
     options: ["230g", "312g", "49g", "88g"],
     answer: 3,
-    explanation: "Il Periodo di Rivoluzione di Mercurio dura 88g."
+    explanation: "Il periodo del moto di rivoluzione (anno sidereo) di Mercurio è, per la precisione, di 87,97 giorni (0,24 anni)."
   },
   {
     question: "Quanto dura il Periodo di Rivoluzione di Nettuno?",
     options: ["17,03 anni", "93,22 anni", "164,82 anni", "273,14 anni"],
     answer: 2,
-    explanation: "Il Periodo di Rivoluzione di Mercurio dura 164,82 anni."
+    explanation: "Il periodo del moto di rivoluzione (anno sidereo) di Nettuno è di 164,82 anni."
   },
   {
-    question: "Come si sono formati gli anelli di Saturno?",
-    options: ["Resti della formazione di Saturno", "Gli anelli si soni formati per la disintegrazione di una luna di Saturno", " Gli anelli sono stati formati da materiale proveniente da comete o asteroidi", "Gli anelli si sono formati dopo il risultato di eruzioni vulcaniche di un satellite di Saturno"],
+    question: "Quanto è denso Saturno?",
+    options: ["il 50% in più della Terra", "Il 70% dell'acqua", "Saturno non ha una densità", "Dipende da quanto veloce gira"],
     answer: 1,
-    explanation: "Gli anelli di Saturno si formano per la disintegrazione di una luna di Saturno."
+    explanation: " La bassa densità di Saturno (Il 70% di quella dell'acqua) significa che, ipoteticamente, galleggerebbe in un oceano d'acqua abbastanza grande da contenerlo."
   },
   {
-    question: "Qual è il destino finale del Sole?",
+    question: "Qual è il destino del Sole?",
     options: ["Il Sole diventerà una nana bianca dopo aver attraversato la fase di gigante rossa", "Il Sole si spegnerà semplicemente", "Il Sole esploderà in una supernova", "Il Sole diventerà un buco nero"],
     answer: 0,
-    explanation: "Il destino del Sole è Il Sole diventerà una nana bianca dopo aver attraversato la fase di gigante rossa."
+    explanation: "Il Sole è a metà della sua vita, avendo circa 4,6 miliardi di anni. Si prevede che continuerà a brillare per altri cinque miliardi di anni, trasformandosi prima in una gigante rossa e poi, alla fine, in una nana bianca."
   },
   {
-    question: "Come si è formata la Luna?",
-    options: ["La Luna è stata catturata dalla gravità terrestre", "La Luna si è formata da una nebulosa separata", "La Luna si è staccata dalla Terra", "La Luna si è formata da una collisione di un corpo celeste con la Terra"],
+    question: "Qual è il periodo di rivoluzione della Terra?",
+    options: ["24h", "9,81gg", "360gg", "365gg"],
     answer: 3,
-    explanation: "La Luna si è formata da una collisione di un corpo celeste con la Terra."
+    explanation: "Il periodo del moto di rivoluzione (anno sidereo) della Terra è di 365 giorni (1 anno)."
   },
   {
     question: "Qual è la causa dell'inclinazione assiale estrema di Urano?",
-    options: ["Contrazione gravitazionale", "Influenza dei pianeti vicini", "Fenomeni atmosferici", "Probabile collisione con un oggetto di grandi dimensioni durante la formazione"],
+    options: ["Contrazione gravitazionale", "Influenza dei pianeti vicini", "Fenomeni atmosferici", "Una collisione con un altro corpo"],
     answer: 3,
-    explanation: "L'inclinazione assiale estrema di Urano è estato causato da una probabile collisione con un oggetto di grandi dimensioni durante la formazione."
+    explanation: "L'inclinazione assiale estrema di Urano è probabilmente dovuta ad una collisone con un corpo planetario di dimensioni simili nei primi stadi della sua formazione, che avrebbe ribaltato il pianeta.."
   },
   {
-    question: "Perché Saturno ha gli anelli più visibili?",
-    options: ["Perchè la composizione degli anelli prevalentemente ghiacciata", "Perchè Saturno è il pianeta più vicino agli anelli", "Perchè gli anelli sono un fenomeno unico di Saturno", "Perchè gli anelli sono formati da materia oscura"],
+    question: "Perchè Saturno non perde l'anello di asteroidi?",
+    options: ["Grazie alla sua gravità", "Gli asteroidi sono incollati al pianeta", "Sono dentro il pianeta", "Possono perdersi in qualsiasi momento"],
     answer: 0,
-    explanation: "Saturno ha gli anelli più visibili perchè la composizione degli anelli prevalentemente ghiacciata."
+    explanation: "Saturno esercita una forza gravitazionale costante sui suoi anelli, impedendo che si disperano nello spazio.."
   },
   {
-    question: "Qual è la differenza tra un gigante gassoso e un gigante ghiacciato?",
-    options: ["Tutti i giganti sono fatti solo di gas", " I giganti gassosi sono fatti di gas leggeri, mentre i giganti ghiacciati hanno una composizione più ricca e complessa", "I giganti ghiacciati sono più freddi dei giganti gassosi", "I giganti gassosi non hanno un nucleo"],
+    question: "Quali sono i giganti ghiacciati del nostro Sistema Solare?",
+    options: ["Il Sole e Saturno", "Urano e Nettuno", "Giove e Marte", "Saturno e Giove"],
     answer: 1,
-    explanation: "La differenza tra gigante gassoso e un gigante ghiacciato è giganti gassosi sono fatti di gas leggeri, mentre i giganti ghiacciati hanno una composizione più ricca e complessa."
+    explanation: "Urano e Nettuno sono classificati come giganti di ghiaccio in quanto nella loro massa totale è presente solo il 20% di idrogeno circa, rispetto a quasi il 90% della presenza di questo gas nei più massicci Giove e Saturno."
   },
   {
-    question: "Dove sono le fasce di radiazione di Van Allen? ",
-    options: ["Urano", "Giove", "Terra", "Mercurio"],
+    question: "Qaul è il pianeta più freddo del Sistema Solare?",
+    options: ["Mercurio", "Terra", "Urano", "Nettuno"],
     answer: 2,
-    explanation: "Le fasce di radiazione di Van Allen sono Terra."
+    explanation: "L'atmosfera di Nettuno ha una temperatura media di -216°C che lo rende il pianeta più freddo del Sistema Solare."
   },
   {
-    question: "Quale pianeta ha perso la maggior parte della sua atmosfera?",
+    question: "Quale pianeta è più simile alla Terra?",
     options: ["Venere", "Marte", "Giove", "Saturno"],
     answer: 1,
-    explanation: "Il pianeta che ha perso la maggior parte della sua atmosfera è Marte."
+    explanation: "La struttura di Marte è simile a quella terrestre, con un nucleo di ferro, un mantello meno attivo rispetto a quello terrestre e una crosta ricca di ferro e altri minerali.."
   },
   {
     question: "Qual è la principale causa dell'effetto serra su Venere?",
-    options: ["A causa dell'atmosfera densa di anidride carbonica", "A causa dell'alta concentrazione di CO2", "A causa dell'atmosfera densa", "A causa della mancanza di assorbimento"],
+    options: ["L'atmosfera piena di anidride carbonica", "La mancanza di atmosfera", "L'atmosfera densa", "Si prende il calore residuo della Terra"],
     answer: 0,
-    explanation: "La principale causa dell'effetto serra su Venere è A causa dell'atmosfera densa di anidride carbonica."
+    explanation: "La sua atmosfera genera una pressione 92 volte superiore a quella terrestre e intrappola il calore, rendendo Venere il pianeta più caldo del Sistema Solare."
   },
   {
     question: "Perché la temperatura della corona solare è superiore a quella della superficie?",
-    options: ["La causa principale del riscaldamento della corona solare è legata al calore proveniente dal nucleo", "La causa principale del riscaldamento della corona solare è legata ai campi magnetici solari", "La causa principale del riscaldamento della corona solare è legata alle particelle solari provenienti dallo spazio", "La causa principale del riscaldamento della corona solare è legata alla vicinanza del Sole"],
+    options: ["Il Nucleo riscalda la superficie", "Il motivo è rimasto un mistero", "Prende il suo calore da particelle provenienti dallo spazio", "L'elevata attività del Sole raggiunge la corona, riscaldandola"],
     answer: 1,
-    explanation: "La temperatura della corona solare è superiore a quella della superficie perchè la causa principale del riscaldamento della corona solare è legata ai campi magnetici solari."
+    explanation: "La corona è la parte più esterna del Sole, ma le temperature sono estremamente alte, più di altri strati sotto stanti. Non si è ancora capito il motivo, ma si pensa sia dovuto alle fluttuazioni di determinate particelle atomiche."
   }
 ];
 
@@ -259,7 +261,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-function loadQuestion(index) {  
+function loadQuestion(index) {
   const questionData = questions[index];
   
   // Mostra la domanda
@@ -301,7 +303,6 @@ function selectOption(optionElement, index) {
 }
 
 function confirmAnswer() {
-  clearInterval(timerInterval);
   const questionData = questions[currentQuestionIndex];
 
   // Disabilita il pulsante di conferma per evitare modifiche
@@ -352,9 +353,6 @@ function getExplanation(index) {
   return questions[index].explanation || "Nessuna spiegazione disponibile per questa domanda.";
 }
 function nextQuestion() {
-  var questionFranco = document.getElementById("questionFranco");
-  var currentValue = parseInt(questionFranco.innerText);
-  questionFranco.innerText = currentValue + 1;
   const explanationContainer = document.getElementById("explanation-container");
   explanationContainer.style.display = 'none'; // Nascondi la spiegazione
   // Incrementa l'indice delle domande
@@ -487,4 +485,3 @@ function goBackMapQuiz(value) {
     break;
   }
 }
-
