@@ -259,13 +259,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-function loadQuestion(index) {
-
-  let franco = 0;
-  
-  // Aggiorna il numero della domanda
-  document.getElementById("question-number").textContent = franco + 1;
-  
+function loadQuestion(index) {  
   const questionData = questions[index];
   
   // Mostra la domanda
@@ -307,7 +301,6 @@ function selectOption(optionElement, index) {
 }
 
 function confirmAnswer() {
-
   clearInterval(timerInterval);
   const questionData = questions[currentQuestionIndex];
 
@@ -359,6 +352,9 @@ function getExplanation(index) {
   return questions[index].explanation || "Nessuna spiegazione disponibile per questa domanda.";
 }
 function nextQuestion() {
+  var questionFranco = document.getElementById("questionFranco");
+  var currentValue = parseInt(questionFranco.innerText);
+  questionFranco.innerText = currentValue + 1;
   const explanationContainer = document.getElementById("explanation-container");
   explanationContainer.style.display = 'none'; // Nascondi la spiegazione
   // Incrementa l'indice delle domande
