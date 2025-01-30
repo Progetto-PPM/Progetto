@@ -1,6 +1,4 @@
-const questions = 
-[
-
+const questions = [
   {
     question: "Qual è la principale fonte di energia per tutti i pianeti del nostro sistema solare?",
     options: ["Nettuno", "Sole", "Fusione Nucleare", "Fotosintesi Clorofilliana"],
@@ -74,7 +72,7 @@ const questions =
     explanation: "Saturno e Urano sono gli unici pianeti che hanno un anello di asteroidi intorno a loro, ma Saturno è l'unico pianeta con l'anello ben visibile."
   },
   {
-    question: "Quale pianeta oltre la Terra presenta segni di acqua liquida??",
+    question: "Quale pianeta oltre la Terra presenta segni di acqua liquida?",
     options: ["Mercurio", "Nettuno", "Marte", "Saturno"],
     answer: 2,
     explanation: "Marte ha calotte polari costituie da ghiaccio d'acqua e ghiaccio secco. Sono stati scoperti inoltre segni di antichi letti di fiumi e possibili oceani, suggerendo che Marte potrebbe aver ospitato acqua liquida e un clima più caldo miliardi di anni fa."
@@ -93,7 +91,7 @@ const questions =
   },
   {
     question: "Perchè Marte non riesce a trattenere il calore?",
-    options: ["E' troppo lontano dal Sole", La pressione atmosferica è troppo poco densa", "La pressione atmosferica è troppo densa", "Il pianeta è troppo piccolo"],
+    options: ["E' troppo lontano dal Sole", "La pressione atmosferica è troppo poco densa", "La pressione atmosferica è troppo densa", "Il pianeta è troppo piccolo"],
     answer: 1,
     explanation: " La pressione atmosferica è solo l'1% di quella terrestre, impedendo a Marte di trattenere calore, il che causa grandi escursioni termiche."
   },
@@ -246,11 +244,11 @@ function disableOptions() {
   document.getElementById("next-btn").style.display = 'none'; // Nascondi il pulsante "Avanti"
 }
 
-
 function passValueAndNavigate(valore) {
   // Modifica l'URL e passa il valore come parametro
   localStorage.setItem("currentQuestionIndex", valore);
   window.location.href= "quiz1.html";
+  contatoredomande = 1;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -261,7 +259,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
 function loadQuestion(index) {
+
   const questionData = questions[index];
   
   // Mostra la domanda
@@ -302,7 +302,11 @@ function selectOption(optionElement, index) {
   document.getElementById("confirm-btn").disabled = false;
 }
 
+
+
+
 function confirmAnswer() {
+  clearInterval(timerInterval);
   const questionData = questions[currentQuestionIndex];
 
   // Disabilita il pulsante di conferma per evitare modifiche
@@ -353,6 +357,9 @@ function getExplanation(index) {
   return questions[index].explanation || "Nessuna spiegazione disponibile per questa domanda.";
 }
 function nextQuestion() {
+  var questionFranco = document.getElementById("questionFranco");
+  var currentValue = parseInt(questionFranco.innerText);
+  questionFranco.innerText = currentValue + 1;
   const explanationContainer = document.getElementById("explanation-container");
   explanationContainer.style.display = 'none'; // Nascondi la spiegazione
   // Incrementa l'indice delle domande
