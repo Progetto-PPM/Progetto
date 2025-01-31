@@ -147,6 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     let bottoneVideo = document.getElementById('bottoneVideo');
+    let videoAperto = false;
 
     bottoneVideo.addEventListener('click', function() {
         let sezioneTesto = document.getElementById('sezioneTesto');
@@ -158,6 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 sezioneVideo.classList.add('showVideo');
                 sezioneVideo.style.display = 'block';
                 bottoneVideo.textContent = 'Ritorna al testo';
+                videoAperto = true;
             }, {once : true});
         } else {
             sezioneVideo.classList.remove('showVideo');
@@ -166,8 +168,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 sezioneVideo.style.display = 'none';
                 sezioneTesto.classList.add('showTesto');
                 bottoneVideo.textContent = 'Visualizza video';
+                videoAperto = false;
             }, {once : true});
         }
+    });
+
+    let bottoniTeoria = document.querySelectorAll('.navPanel_1');
+
+    bottoniTeoria.forEach(element => {
+        element.addEventListener('click', function() {
+            let sezioneTesto = document.getElementById('sezioneTesto');
+            let sezioneVideo = document.getElementById('sezioneVideo');
+            if (videoAperto) {
+                console.log("sono nella funzione");
+                sezioneVideo.classList.remove('showVideo');
+                sezioneVideo.classList.add('hideVideo');
+                sezioneVideo.addEventListener('animationend', function() {
+                sezioneVideo.style.display = 'none';
+                sezioneTesto.classList.add('showTesto');
+                bottoneVideo.textContent = 'Visualizza video';
+                videoAperto = false;
+            }, {once : true});
+            }
+        });
     });
 });
 
