@@ -439,7 +439,7 @@ IL MODELLO 3D QUANDO SI CHIUDE LA SEZIONE DI TESTO*/
 
 #bottoneVideo {
     width: 300px;
-    height: 30px;
+    height: 25px;
     background: radial-gradient(circle, rgba(134,124,124,1) 0%, rgb(120, 87, 192) 100%);
     position: absolute;
     bottom: 0px;
@@ -454,10 +454,11 @@ IL MODELLO 3D QUANDO SI CHIUDE LA SEZIONE DI TESTO*/
     display: grid;
     place-items: center;
     color: #FF6347; /* Tomato red for highlighted words */
-    font-weight: bold;
+    font-family: fantasy;
     text-transform: uppercase;
     -webkit-text-stroke: 0.7px black;
 }
+
 
 #startVideo {
     width: 30%;
@@ -468,7 +469,7 @@ IL MODELLO 3D QUANDO SI CHIUDE LA SEZIONE DI TESTO*/
 #bottoneVideo:hover {
     cursor: pointer;
     width: 310px;
-    height: 35px;
+    height: 30px;
     background: radial-gradient(circle, rgba(134,124,124,1) 0%, rgb(78, 16, 214) 100%);
 }
 
@@ -546,5 +547,18 @@ IL MODELLO 3D QUANDO SI CHIUDE LA SEZIONE DI TESTO*/
     border: 3px solid white;
     border-radius: 10%;
     background: radial-gradient(circle, rgba(134,124,124,1) 0%, rgb(169, 137, 239) 100%);
+}
+
+.highlightWord {
+    font-family: fantasy;
+    color: #FF6347;
+    -webkit-text-stroke: 0.5px black;
+}
+
+.highlightEnci {
+    font-family: fantasy;
+    color: #FF6347;
+    -webkit-text-stroke: 0.5px black;
+    text-transform: uppercase;
 }
 
