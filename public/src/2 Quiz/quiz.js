@@ -12,16 +12,16 @@ const questions = [
     explanation: "Il pianeta più vicino al sole è Mercurio."
   },
   {
-    question: "Qual è il pianeta più grande del nostro sistema solare?",
+    question: "Qual è il pianeta più grande del nostro Sistema Solare?",
     options: ["Sole", "Terra", "Marte", "Giove"],
     answer: 3,
-    explanation: "Il pianeta più grande del nostro sistema solare è Giove, con un diametro di ben 139mila km!."
+    explanation: "Il pianeta più grande del nostro Sistema Solare è Giove, con un diametro di ben 139mila km!."
   },
   {
     question: "Qual è lo strato più interno del Sole?",
     options: ["Zona Radiativa", "Zona Convettiva", "Nucleo", "Fotosfera"],
     answer: 2,
-    explanation: "Lo strato più interno del Sole è il Nucleo, dove avvengono molte reazioni di fusione di idrogeno che, trasformandosi in eio viene liberata l'energia che viaggerà negli strati superiori."
+    explanation: "Lo strato più interno del Sole è il Nucleo, dove avvengono molte reazioni di fusione di idrogeno che, trasformandosi in elio viene liberata l'energia che viaggerà negli strati superiori."
   },
   {
     question: "Quale pianeta è famoso per la sua Grande Macchia Rossa?",
@@ -45,13 +45,13 @@ const questions = [
     question: "Qual è l'unico pianeta conosciuto per ospitare la vita?",
     options: ["Terra", "Marte", "Giove", "Saturno"],
     answer: 0,
-    explanation: "La Terra è il solo pianeta noto ad avere acqua in tutti e tre gli stati (solido, liquido e gassoso) e la temperatura ottimale data dall'atmosfera, rendono la Terra un pianeta ottimale per la vita."
+    explanation: "La Terra è il solo pianeta noto ad avere acqua in tutti e tre gli stati (solido, liquido e gassoso) e la temperatura ottimale data dall'atmosfera, rendono la Terra un pianeta ottimale per la vita come la conosciamo."
   },
   {
     question: "Come viene generato il campo magnetico terrestre?",
     options: ["Dal movimento delle placche", "Dal movimento del nucleo esterno", "Dalle eruzioni vulcaniche", "Da quanto ferro viene scavato"],
     answer: 1,
-    explanation: "Il moveimento del nucleo esterno genera un circuito elettrico profondo che crea un campo magnetico allineato con l'asse di rotazione."
+    explanation: "Il movimento del nucleo esterno genera un circuito elettrico profondo che crea un campo magnetico allineato con l'asse di rotazione."
   },
   {
     question: "Quale pianeta ospita il vulcano più grande del sistema solare?",
@@ -75,7 +75,7 @@ const questions = [
     question: "Quale pianeta oltre la Terra presenta segni di acqua liquida?",
     options: ["Mercurio", "Nettuno", "Marte", "Saturno"],
     answer: 2,
-    explanation: "Marte ha calotte polari costituie da ghiaccio d'acqua e ghiaccio secco. Sono stati scoperti inoltre segni di antichi letti di fiumi e possibili oceani, suggerendo che Marte potrebbe aver ospitato acqua liquida e un clima più caldo miliardi di anni fa."
+    explanation: "Marte ha delle calotte polari costituie da ghiaccio d'acqua e ghiaccio secco. Sono stati scoperti inoltre segni di antichi letti di fiumi e possibili oceani, suggerendo che Marte potrebbe aver ospitato acqua liquida e un clima più caldo miliardi di anni fa."
   },
   {
     question: "Da cosa viene influenzata l'atmosfera terrestre?",
@@ -97,15 +97,15 @@ const questions = [
   },
   {
     question: "Qual è lo strato più esterno della Terra?",
-    options: ["Il mantello", "L'oceano", "La crosta", "Le Nuvole"],
+    options: ["Il mantello", "L'oceano", "La crosta", "Le nuvole"],
     answer: 2,
     explanation: "La crosta terrestre è la parte più esterna del pianeta Terra, del cui intero volume essa costituisce soltanto l'1%, una sorta di involucro di piccolissimo spessore, qualche decina di chilometri appena."
   },
   {
     question: "Come ci proteggono Giove e Saturno?",
-    options: ["Spaventa chi è fuori dal Sistema Solare", "Assorbendo gli asteroidi", "Fornisce energia agli altri pianeti", "Deviando gli asteroidi con la sua forza di gravità"],
+    options: ["Spaventano chi è fuori dal Sistema Solare", "Assorbono gli asteroidi", "Forniscono energia agli altri pianeti", "Deviano gli asteroidi con la loro forza di gravità"],
     answer: 3,
-    explanation: " grazie alla gravità combinata di Giove e Saturno, buona parte degli asteroidi viene espulso dal Sistema Solare, dando tranquillità al nostro Sistema Solare."
+    explanation: "Grazie alla gravità combinata di Giove e Saturno, buona parte degli asteroidi provenienti dallo spazio aperto viene espulsa dal Sistema Solare."
   },
   {
     question: "Quanto dura il Periodo di Rivoluzione di Mercurio?",
@@ -127,7 +127,7 @@ const questions = [
   },
   {
     question: "Qual è il destino del Sole?",
-    options: ["Il Sole diventerà una nana bianca dopo aver attraversato la fase di gigante rossa", "Il Sole si spegnerà semplicemente", "Il Sole esploderà in una supernova", "Il Sole diventerà un buco nero"],
+    options: ["Il Sole diventerà una nana bianca dopo aver attraversato la fase di gigante rossa", "Il Sole si spegnerà", "Il Sole esploderà in una supernova", "Il Sole diventerà un buco nero"],
     answer: 0,
     explanation: "Il Sole è a metà della sua vita, avendo circa 4,6 miliardi di anni. Si prevede che continuerà a brillare per altri cinque miliardi di anni, trasformandosi prima in una gigante rossa e poi, alla fine, in una nana bianca."
   },
@@ -165,7 +165,7 @@ const questions = [
     question: "Quale pianeta è più simile alla Terra?",
     options: ["Venere", "Marte", "Giove", "Saturno"],
     answer: 1,
-    explanation: "La struttura di Marte è simile a quella terrestre, con un nucleo di ferro, un mantello meno attivo rispetto a quello terrestre e una crosta ricca di ferro e altri minerali.."
+    explanation: "La struttura di Marte è simile a quella terrestre, con un nucleo di ferro, un mantello meno attivo rispetto a quello terrestre e una crosta ricca di ferro e altri minerali."
   },
   {
     question: "Qual è la principale causa dell'effetto serra su Venere?",
