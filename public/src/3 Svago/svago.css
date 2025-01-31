@@ -145,7 +145,7 @@ body {
     border: 2px solid white;
     position: absolute;
     top: 20px;
-    color: yellow;
+    color: #f09382;
     font-size: 15px;
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
@@ -176,10 +176,9 @@ body {
 
 .emphasized {
     font-size: 18px;
-    color: #32CD32; /* Lime green for emphasis */
+    color: #FF6347; /* Tomato red for highlighted words */
     font-weight: bold;
     font-style: italic;
-    
 }
 
 @media (max-width: 768px) {
