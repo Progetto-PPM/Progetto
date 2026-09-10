@@ -1,0 +1,93 @@
+Il Sistema Solare
+Questo progetto è stato realizzato a scopo didattico.
+Applicazione web interattiva dedicata alla scoperta e all'apprendimento del Sistema Solare.
+Il progetto combina contenuti didattici, elementi multimediali e attività interattive per permettere all'utente di esplorare i principali corpi celesti del Sistema Solare in modo semplice e coinvolgente.
+Descrizione
+
+Il Sistema Solare è un'applicazione educativa sviluppata come progetto multimediale dal Team Apollo.
+L'applicazione è strutturata in diverse sezioni:
+Teoria — informazioni e approfondimenti sui principali corpi celesti.
+Quiz — domande a risposta multipla con diversi livelli di difficoltà.
+Svago — gioco interattivo per mettere alla prova le proprie conoscenze.
+Modelli 3D — visualizzazione interattiva del Sistema Solare e dei singoli pianeti.
+Contenuti multimediali — immagini, video e musica di accompagnamento.
+Mappe di navigazione — sistema di mappe per orientarsi all'interno dell'applicazione.
+
+Progetto-main/
+│
+└── public/
+    │
+    ├── index.html
+    ├── index.css
+    ├── overlay.css
+    ├── script.js
+    │
+    ├── Media/
+    │   ├── Audio/
+    │   │   └── Interstellar.mp3
+    │   │
+    │   ├── Immagini/
+    │   │   ├── Crediti/
+    │   │   ├── Immagini 3D/
+    │   │   │   ├── Pianeti singoli 3D/
+    │   │   │   ├── sistema3D.html
+    │   │   │   └── sistema_completo.glb
+    │   │   ├── Mappe/
+    │   │   ├── sfondi/
+    │   │   └── tasti/
+    │   │
+    │   └── Video/
+    │       └── giove.mp4
+    │
+    └── src/
+        │
+        ├── home.html
+        ├── home.css
+        │
+        ├── 1 Teoria/
+        │   ├── teoria.html
+        │   ├── teoria.css
+        │   ├── teoria.js
+        │   ├── teoria2.js
+        │   └── 1_1 Corpi Maggiori/
+        │       ├── sole.html
+        │       ├── sole3d.html
+        │       ├── mercurio.html
+        │       ├── mercurio3d.html
+        │       ├── venere.html
+        │       ├── venere3d.html
+        │       ├── terra.html
+        │       ├── terra3d.html
+        │       ├── marte.html
+        │       ├── marte3d.html
+        │       ├── giove.html
+        │       ├── giove3d.html
+        │       ├── saturno.html
+        │       ├── saturno3d.html
+        │       ├── urano.html
+        │       ├── urano3d.html
+        │       ├── nettuno.html
+        │       └── nettuno3d.html
+        │
+        ├── 2 Quiz/
+        │   ├── QUIZ.html
+        │   ├── quiz1.html
+        │   ├── quiz.css
+        │   └── quiz.js
+        │
+        ├── 3 Svago/
+        │   ├── svago.html
+        │   ├── svago.css
+        │   └── svago.js
+        │
+        └── Layout/
+            ├── layout.css
+            └── layout.js
+Avvio
+Dopo aver installato le dipendenze, avviare il server Node.js con:
+npm start
+Se il progetto non dispone di uno script start nel package.json, è possibile avviare direttamente il server con:
+node server.js
+Una volta avviato il server, nel terminale verrà indicato l'indirizzo locale dell'applicazione, ad esempio:
+Server avviato su http://localhost:3000
+Aprire quindi l'indirizzo indicato nel browser.
